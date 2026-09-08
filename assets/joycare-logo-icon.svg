@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <clipPath id="jcLeftHalf"><rect x="0" y="0" width="50" height="100"/></clipPath>
+    <clipPath id="jcRightHalf"><rect x="50" y="0" width="50" height="100"/></clipPath>
+  </defs>
+  <path d="M50,88 C20,65 5,45 5,28 C5,12 20,2 35,10 C42,14 48,20 50,28 C52,20 58,14 65,10 C80,2 95,12 95,28 C95,45 80,65 50,88 Z"
+        fill="#173C39" clip-path="url(#jcLeftHalf)"/>
+  <path d="M50,88 C20,65 5,45 5,28 C5,12 20,2 35,10 C42,14 48,20 50,28 C52,20 58,14 65,10 C80,2 95,12 95,28 C95,45 80,65 50,88 Z"
+        fill="#E7A23B" clip-path="url(#jcRightHalf)"/>
+  <line x1="50" y1="30" x2="50" y2="82" stroke="#F7F1E6" stroke-width="2.4" stroke-linecap="round"/>
+  <circle cx="50" cy="27" r="4.5" fill="#F7F1E6"/>
+</svg>
