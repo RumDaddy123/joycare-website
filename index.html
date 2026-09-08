@@ -1205,7 +1205,9 @@ async function loadBlogPostsFromBackend(){
   }
 }
 
-/* Bài viết xuất bản trong blog/posts.json là dữ liệu mặc định khi chưa có API. */
+/* Bài viết xuất bản trong blog/posts.json là nguồn chính (repo).
+   Hợp nhất với dữ liệu local: thêm bài mới từ posts.json, giữ bài nháp
+   chỉ có trong local (từ trang admin) và giữ nội dung admin đã sửa. */
 async function loadStaticBlogPosts(){
   try{
     const res = await fetch('/blog/posts.json', {cache:'no-store'});
@@ -1218,6 +1220,21 @@ async function loadStaticBlogPosts(){
       saveBlogPosts(staticPosts);
       localStorage.removeItem('joycare_blog_seeded');
       renderBlogSection(1);
+      return;
+    }
+    const localBySlug = {};
+    currentPosts.forEach(p=>{ if(p && p.slug) localBySlug[p.slug] = p; });
+    const staticSlugs = {};
+    const merged = staticPosts.map(sp=>{
+      staticSlugs[sp.slug] = true;
+      const local = localBySlug[sp.slug];
+      // Giữ bản admin đã sửa (nội dung khác bản tĩnh), còn lại dùng bản tĩnh mới nhất.
+      return (local && local.content !== sp.content) ? local : sp;
+    });
+    currentPosts.forEach(p=>{ if(p && p.slug && !staticSlugs[p.slug]) merged.push(p); });
+    if(JSON.stringify(currentPosts) !== JSON.stringify(merged)){
+      saveBlogPosts(merged);
+      renderBlogSection(blogCurrentPage);
     }
   }catch(err){
     if(getBlogPosts().length === 0) seedSampleBlogPosts();
