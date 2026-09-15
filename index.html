@@ -458,22 +458,22 @@
 <section id="dang-ky" class="registration-section px-5 md:px-8 py-20">
   <div class="max-w-7xl mx-auto">
     <p class="eyebrow text-center mb-3" data-i18n="registration.eyebrow">BẮT ĐẦU KẾT NỐI</p>
-    <h2 class="section-heading font-display text-3xl md:text-4xl text-teal-deep text-center mb-4" data-i18n="registration.title">Chia sẻ nhu cầu, JoyCare sẽ liên hệ lại</h2>
-    <p class="text-teal-mid text-center max-w-2xl mx-auto mb-10" data-i18n="registration.subtitle">Chọn biểu mẫu phù hợp. Thông tin giúp đội ngũ hiểu nhu cầu và kết nối bạn với hướng hỗ trợ phù hợp.</p>
+    <h2 class="section-heading font-display text-3xl md:text-4xl text-teal-deep text-center mb-4" data-i18n="registration.title">Chia sẻ nhu cầu, JoyCare sẽ liên hệ khi phù hợp</h2>
+    <p class="text-teal-mid text-center max-w-2xl mx-auto mb-10" data-i18n="registration.subtitle">Chọn biểu mẫu phù hợp. Thông tin giúp JoyCare gửi tài liệu và liên hệ khi triển khai phù hợp.</p>
 
     <div id="registrationChoices" class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto" role="group" aria-label="Chọn loại đăng ký">
       <button type="button" class="registration-choice card" data-registration-type="customer">
         <div class="w-12 h-12 rounded-2xl bg-sage/50 text-teal-deep flex items-center justify-center mb-5"><i data-lucide="heart-handshake" class="w-6 h-6"></i></div>
         <p class="eyebrow mb-2" data-i18n="customerForm.eyebrow">DÀNH CHO GIA ĐÌNH</p>
-        <h3 class="font-display text-2xl text-teal-deep mb-2" data-i18n="customerForm.title">Đăng ký tìm người chăm sóc</h3>
-        <p class="text-sm text-teal-mid" data-i18n="registration.customerChoice">Bạn cần tìm người chăm sóc hoặc tư vấn dịch vụ tại nhà.</p>
+        <h3 class="font-display text-2xl text-teal-deep mb-2" data-i18n="customerForm.title">Đăng ký nhận thông tin (Gia đình)</h3>
+        <p class="text-sm text-teal-mid" data-i18n="registration.customerChoice">Bạn quan tâm dịch vụ chăm sóc tại nhà — để lại thông tin để nhận tài liệu và được báo khi mở.</p>
         <span class="choice-arrow" data-i18n="registration.chooseForm">Chọn biểu mẫu này →</span>
       </button>
       <button type="button" class="registration-choice card" data-registration-type="caregiver">
         <div class="w-12 h-12 rounded-2xl bg-amber/25 text-teal-deep flex items-center justify-center mb-5"><i data-lucide="badge-check" class="w-6 h-6"></i></div>
         <p class="eyebrow mb-2" data-i18n="caregiverForm.eyebrow">DÀNH CHO NGƯỜI CHĂM SÓC</p>
-        <h3 class="font-display text-2xl text-teal-deep mb-2" data-i18n="caregiverForm.title">Đăng ký làm cộng tác viên</h3>
-        <p class="text-sm text-teal-mid" data-i18n="registration.caregiverChoice">Bạn muốn ứng tuyển cộng tác viên hoặc người chăm sóc.</p>
+        <h3 class="font-display text-2xl text-teal-deep mb-2" data-i18n="caregiverForm.title">Đăng ký CTV đợt chuẩn bị</h3>
+        <p class="text-sm text-teal-mid" data-i18n="registration.caregiverChoice">Bạn muốn tham gia mạng lưới CTV đợt chuẩn bị.</p>
         <span class="choice-arrow" data-i18n="registration.chooseForm">Chọn biểu mẫu này →</span>
       </button>
     </div>
@@ -483,8 +483,8 @@
         <button type="button" class="text-sm text-teal-mid underline mb-5" data-registration-back data-i18n="registration.backToChoices">← Chọn lại nhu cầu</button>
         <div class="w-12 h-12 rounded-2xl bg-sage/50 text-teal-deep flex items-center justify-center mb-5"><i data-lucide="heart-handshake" class="w-6 h-6"></i></div>
         <p class="eyebrow mb-2" data-i18n="customerForm.eyebrow">DÀNH CHO GIA ĐÌNH</p>
-        <h3 class="font-display text-2xl text-teal-deep mb-2" data-i18n="customerForm.title">Đăng ký tìm người chăm sóc</h3>
-        <p class="text-sm text-teal-mid mb-6" data-i18n="customerForm.subtitle">Điền thông tin, đội ngũ JoyCare sẽ liên hệ trong vòng 30 phút.</p>
+        <h3 class="font-display text-2xl text-teal-deep mb-2" data-i18n="customerForm.title">Đăng ký nhận thông tin (Gia đình)</h3>
+        <p class="text-sm text-teal-mid mb-6" data-i18n="customerForm.subtitle">Điền thông tin, JoyCare sẽ gửi tài liệu và liên hệ khi triển khai tại khu vực bạn.</p>
         <form id="customerForm" class="space-y-4">
           <div class="grid sm:grid-cols-2 gap-4">
             <div><label for="customerName" data-i18n="customerForm.name">Họ và tên</label><input id="customerName" name="name" type="text" autocomplete="name" required></div>
@@ -505,8 +505,8 @@
         <button type="button" class="text-sm text-teal-mid underline mb-5" data-registration-back data-i18n="registration.backToChoices">← Chọn lại nhu cầu</button>
         <div class="w-12 h-12 rounded-2xl bg-amber/25 text-teal-deep flex items-center justify-center mb-5"><i data-lucide="badge-check" class="w-6 h-6"></i></div>
         <p class="eyebrow mb-2" data-i18n="caregiverForm.eyebrow">DÀNH CHO NGƯỜI CHĂM SÓC</p>
-        <h3 class="font-display text-2xl text-teal-deep mb-2" data-i18n="caregiverForm.title">Đăng ký làm cộng tác viên</h3>
-        <p class="text-sm text-teal-mid mb-6" data-i18n="caregiverForm.subtitle">Gia nhập mạng lưới JoyCare và nhận việc phù hợp với chuyên môn của bạn.</p>
+        <h3 class="font-display text-2xl text-teal-deep mb-2" data-i18n="caregiverForm.title">Đăng ký CTV đợt chuẩn bị</h3>
+        <p class="text-sm text-teal-mid mb-6" data-i18n="caregiverForm.subtitle">Tham gia đợt chuẩn bị mạng lưới, JoyCare sẽ liên hệ phỏng vấn khi phù hợp.</p>
         <form id="caregiverForm" class="space-y-4">
           <div class="grid sm:grid-cols-2 gap-4">
             <div><label for="caregiverName" data-i18n="caregiverForm.name">Họ và tên</label><input id="caregiverName" name="name" type="text" autocomplete="name" required></div>
@@ -606,7 +606,7 @@
 <section id="khao-sat" class="px-5 md:px-8 py-16 bg-teal-deep text-white">
   <div class="max-w-3xl mx-auto text-center">
     <p class="eyebrow !text-sage mb-3" data-i18n="survey.eyebrow">KHẢO SÁT NHANH</p>
-    <h2 class="font-display text-2xl md:text-3xl mb-6" data-i18n="survey.title">Điều gì khiến bạn quan tâm nhất khi tìm người chăm sóc?</h2>
+    <h2 class="font-display text-2xl md:text-3xl mb-6" data-i18n="survey.title">Điều gì khiến bạn quan tâm nhất khi tìm hiểu dịch vụ chăm sóc?</h2>
     <form id="quickSurveyForm" class="flex flex-wrap gap-3 justify-center">
       <label class="card !bg-white/10 !border-white/20 text-white px-4 py-2 rounded-full cursor-pointer flex items-center gap-2">
         <input type="radio" name="priority" value="trust" class="!w-4"> <span data-i18n="survey.opt1">Độ tin cậy</span>
@@ -631,8 +631,8 @@
     <div class="grid lg:grid-cols-12 gap-8 items-center">
       <div class="lg:col-span-5">
         <p class="eyebrow mb-2">ĐỊA CHỈ &amp; VỊ TRÍ</p>
-        <h2 class="font-display text-2xl md:text-3xl text-teal-deep mb-4">Văn phòng JoyCare</h2>
-        <p class="text-teal-mid mb-6">JoyCare cung cấp dịch vụ chăm sóc và can thiệp chuyên biệt tận nơi trên toàn địa bàn TP. Đà Nẵng. Bạn có thể liên hệ trực tiếp hoặc ghé văn phòng theo địa chỉ bên dưới.</p>
+        <h2 class="font-display text-2xl md:text-3xl text-teal-deep mb-4">Địa điểm liên hệ</h2>
+        <p class="text-teal-mid mb-6">JoyCare đang chuẩn bị mạng lưới chăm sóc và can thiệp chuyên biệt tại TP. Đà Nẵng. Bạn có thể liên hệ trực tiếp theo địa chỉ bên dưới.</p>
         <div class="space-y-4 text-sm text-teal-mid mb-6">
           <div class="flex items-start gap-3 p-3.5 bg-white/70 rounded-xl border border-line">
             <i data-lucide="map-pin" class="w-5 h-5 text-teal-deep shrink-0 mt-0.5"></i>
@@ -763,7 +763,7 @@ lucide.createIcons();
 const translations = {
   vi: {
     "nav.services":"Dịch vụ","nav.process":"Quy trình","nav.reviews":"Đánh giá",
-    "nav.forCustomer":"Tìm người chăm sóc","nav.forCaregiver":"Trở thành CTV","nav.cta":"Khám phá dịch vụ","nav.contact":"Liên hệ tư vấn","nav.register":"Đăng ký tư vấn",
+    "nav.forCustomer":"Tìm hiểu dịch vụ","nav.forCaregiver":"Trở thành CTV","nav.cta":"Khám phá dịch vụ","nav.contact":"Liên hệ tư vấn","nav.register":"Đăng ký nhận thông tin",
     "hero.eyebrow":"NỀN TẢNG CHĂM SÓC TẠI NHÀ HÀNG ĐẦU",
     "hero.title":"<span class=\"hero-title-line\">Chăm sóc &amp; <span class=\"hero-title-keep\">can thiệp</span></span><span class=\"hero-title-line\">chuyên biệt tại nhà</span>",
     "hero.subtitle":"JoyCare.vn tập trung phát triển các dịch vụ chăm sóc và can thiệp chuyên biệt cho mẹ sau sinh, trẻ tự kỷ, ADHD, chậm nói, vật lý trị liệu và phục hồi chức năng.",
@@ -771,16 +771,16 @@ const translations = {
     "hero.stat1":"Lĩnh vực chuyên môn trọng tâm","hero.stat2":"Bài viết chia sẻ kiến thức","hero.stat3":"Phục vụ chăm sóc tại nhà",
     "doors.eyebrow":"BẠN ĐANG Ở ĐÂU TRONG CÂU CHUYỆN NÀY?","doors.title":"Chọn cánh cửa của bạn",
     "doors.customerTitle":"Gia đình cần chăm sóc",
-    "doors.customerDesc":"Tìm người chăm sóc phù hợp cho em bé, người già, người bệnh hoặc người cần phục hồi chức năng — được xác minh và giám sát chất lượng.",
-    "doors.customerCta":"Đăng ký tìm người chăm sóc →",
+    "doors.customerDesc":"Chia sẻ nhu cầu chăm sóc cho em bé, người già, người bệnh hoặc phục hồi chức năng — JoyCare đang hoàn thiện mạng lưới và sẽ liên hệ khi triển khai phù hợp.",
+    "doors.customerCta":"Đăng ký nhận thông tin →",
     "doors.caregiverTitle":"Người chăm sóc chuyên nghiệp",
-    "doors.caregiverDesc":"Gia nhập mạng lưới JoyCare, nhận việc phù hợp chuyên môn — điều dưỡng, kỹ thuật viên VLTL, giáo viên can thiệp sớm và hơn thế nữa.",
-    "doors.caregiverCta":"Đăng ký làm cộng tác viên →",
+    "doors.caregiverDesc":"Tham gia đợt chuẩn bị mạng lưới JoyCare — điều dưỡng, kỹ thuật viên VLTL, giáo viên can thiệp sớm và hơn thế nữa.",
+    "doors.caregiverCta":"Đăng ký CTV đợt chuẩn bị →",
     "services.eyebrow":"DỊCH VỤ CỦA CHÚNG TÔI","services.title":"Chăm sóc đúng người, đúng nhu cầu",
     "services.subtitle":"Mỗi độ tuổi, mỗi tình trạng sức khỏe cần một cách chăm sóc khác nhau. JoyCare ghép nối theo đúng chuyên môn.",
-    "services.focusText":"<strong class=\"text-teal-deep\">Lĩnh vực trọng tâm:</strong> hỗ trợ trẻ em rối loạn phổ tự kỷ (RLPTK), ADHD và chậm nói; vật lý trị liệu, phục hồi chức năng và chăm sóc sau sinh tại Đà Nẵng.","services.register":"Đăng ký nhu cầu",
-    "focus.eyebrow":"GIAI ĐOẠN CHUYÊN BIỆT","focus.title":"Tập trung để chăm sóc đúng hơn","focus.card1Title":"Sáu lĩnh vực trọng tâm","focus.card1Text":"JoyCare đang đầu tư chiều sâu chuyên môn cho chăm sóc sau sinh, can thiệp phát triển trẻ và phục hồi chức năng.","focus.card2Title":"Đăng ký theo nhu cầu","focus.card2Text":"Gia đình và cộng tác viên có thể gửi thông tin để JoyCare liên hệ, lắng nghe và kết nối phù hợp.",
-    "registration.eyebrow":"BẮT ĐẦU KẾT NỐI","registration.title":"Bạn đang cần hỗ trợ theo cách nào?","registration.subtitle":"Chọn đúng nhu cầu trước, JoyCare sẽ hiển thị biểu mẫu phù hợp để bạn đăng ký nhanh và rõ ràng.","registration.customerChoice":"Bạn cần tìm người chăm sóc hoặc tư vấn dịch vụ tại nhà.","registration.caregiverChoice":"Bạn muốn ứng tuyển cộng tác viên hoặc người chăm sóc.","registration.chooseForm":"Chọn biểu mẫu này →","registration.backToChoices":"← Chọn lại nhu cầu",
+    "services.focusText":"<strong class=\"text-teal-deep\">Lĩnh vực trọng tâm:</strong> hỗ trợ trẻ em rối loạn phổ tự kỷ (RLPTK), ADHD và chậm nói; vật lý trị liệu, phục hồi chức năng và chăm sóc sau sinh tại Đà Nẵng.","services.register":"Gửi nhu cầu quan tâm",
+    "focus.eyebrow":"GIAI ĐOẠN CHUYÊN BIỆT","focus.title":"Tập trung để chăm sóc đúng hơn","focus.card1Title":"Sáu lĩnh vực trọng tâm","focus.card1Text":"JoyCare đang đầu tư chiều sâu chuyên môn cho chăm sóc sau sinh, can thiệp phát triển trẻ và phục hồi chức năng.","focus.card2Title":"Đăng ký nhận thông tin","focus.card2Text":"Gia đình và cộng tác viên có thể gửi thông tin để JoyCare gửi tài liệu và liên hệ khi triển khai phù hợp.",
+    "registration.eyebrow":"BẮT ĐẦU KẾT NỐI","registration.title":"Bạn đang quan tâm theo cách nào?","registration.subtitle":"Chọn đúng nhu cầu trước, JoyCare sẽ hiển thị biểu mẫu phù hợp để bạn gửi thông tin nhanh và rõ ràng.","registration.customerChoice":"Bạn quan tâm dịch vụ chăm sóc tại nhà — để lại thông tin để nhận tài liệu và được báo khi mở.","registration.caregiverChoice":"Bạn muốn tham gia mạng lưới CTV đợt chuẩn bị.","registration.chooseForm":"Chọn biểu mẫu này →","registration.backToChoices":"← Chọn lại nhu cầu",
     "process.eyebrow":"QUY TRÌNH","process.title":"Chỉ 4 bước để bắt đầu",
     "reviews.eyebrow":"KHÁCH HÀNG & CỘNG TÁC VIÊN NÓI GÌ","reviews.title":"Những câu chuyện thật",
     "nav.blog":"Blog",
@@ -788,30 +788,30 @@ const translations = {
     "blog.subtitle":"Kiến thức chăm sóc, phục hồi chức năng và những câu chuyện từ mạng lưới JoyCare.",
     "blog.readMore":"Đọc thêm →","blog.empty":"Chưa có bài viết nào, quay lại sau nhé!",
     "blog.back":"Quay lại Blog","blog.filtering":"Đang lọc theo","blog.clearFilter":"Xem tất cả",
-    "customerForm.eyebrow":"DÀNH CHO GIA ĐÌNH","customerForm.title":"Đăng ký tìm người chăm sóc",
-    "customerForm.subtitle":"Điền thông tin, đội ngũ JoyCare sẽ liên hệ trong vòng 30 phút.",
+    "customerForm.eyebrow":"DÀNH CHO GIA ĐÌNH","customerForm.title":"Đăng ký nhận thông tin (Gia đình)",
+    "customerForm.subtitle":"Điền thông tin, JoyCare sẽ gửi tài liệu và liên hệ khi triển khai tại khu vực bạn.",
     "customerForm.name":"Họ và tên","customerForm.phone":"Số điện thoại","customerForm.service":"Dịch vụ cần tìm",
     "customerForm.servicePlaceholder":"-- Chọn dịch vụ --","customerForm.city":"Khu vực","customerForm.schedule":"Thời gian cần",
     "customerForm.fulltime":"Toàn thời gian","customerForm.parttime":"Bán thời gian","customerForm.hourly":"Theo giờ",
     "customerForm.notes":"Ghi chú thêm","customerForm.submit":"Gửi đăng ký","customerForm.schedulePlaceholder":"-- Chọn thời gian --","customerForm.consultation":"Cần tư vấn trước","customerForm.cityPlaceholder":"Ví dụ: Hải Châu, Đà Nẵng","customerForm.notesPlaceholder":"Nhu cầu, thời điểm mong muốn hoặc điều bạn muốn JoyCare lưu ý",
-    "caregiverForm.eyebrow":"DÀNH CHO NGƯỜI CHĂM SÓC","caregiverForm.title":"Đăng ký làm cộng tác viên",
-    "caregiverForm.subtitle":"Gia nhập mạng lưới JoyCare và nhận việc phù hợp với chuyên môn của bạn.",
+    "caregiverForm.eyebrow":"DÀNH CHO NGƯỜI CHĂM SÓC","caregiverForm.title":"Đăng ký CTV đợt chuẩn bị",
+    "caregiverForm.subtitle":"Tham gia đợt chuẩn bị mạng lưới, JoyCare sẽ liên hệ phỏng vấn khi phù hợp.",
     "caregiverForm.name":"Họ và tên","caregiverForm.phone":"Số điện thoại","caregiverForm.experience":"Kinh nghiệm (năm)",
     "caregiverForm.specialty":"Chuyên môn","caregiverForm.specialtyPlaceholder":"-- Chọn chuyên môn --",
     "caregiverForm.city":"Khu vực làm việc","caregiverForm.certificate":"Chứng chỉ / bằng cấp liên quan","caregiverForm.submit":"Gửi đăng ký","caregiverForm.cityPlaceholder":"Ví dụ: Sơn Trà, Đà Nẵng","caregiverForm.certificatePlaceholder":"Nêu bằng cấp, chứng chỉ hoặc kinh nghiệm phù hợp",
     "service.postpartum":"Chăm sóc sau sinh","service.autism":"Hỗ trợ trẻ tự kỷ (RLPTK)","service.adhd":"Hỗ trợ ADHD","service.speech":"Hỗ trợ trẻ chậm nói","service.physio":"Vật lý trị liệu","service.rehab":"Phục hồi chức năng","service.baby":"Chăm sóc em bé & trẻ nhỏ","service.elderly":"Chăm sóc người già","service.patient":"Chăm sóc người bệnh","service.other":"Nhu cầu khác",
     "specialty.nursing":"Điều dưỡng / chăm sóc","specialty.postpartum":"Chăm sóc sau sinh","specialty.early":"Giáo viên can thiệp sớm","specialty.speech":"Ngôn ngữ trị liệu","specialty.physio":"Kỹ thuật viên VLTL / PHCN","specialty.other":"Chuyên môn khác",
-    "survey.eyebrow":"KHẢO SÁT NHANH","survey.title":"Điều gì khiến bạn quan tâm nhất khi tìm người chăm sóc?",
+    "survey.eyebrow":"KHẢO SÁT NHANH","survey.title":"Điều gì khiến bạn quan tâm nhất khi tìm hiểu dịch vụ chăm sóc?",
     "survey.opt1":"Độ tin cậy","survey.opt2":"Giá cả","survey.opt3":"Chuyên môn","survey.opt4":"Tốc độ phản hồi","survey.submit":"Gửi",
     "popup.eyebrow":"CHỈ MẤT 10 GIÂY","popup.title":"Bạn đang tìm dịch vụ chăm sóc cho ai?",
     "popup.opt1":"Em bé / trẻ nhỏ","popup.opt2":"Người già","popup.opt3":"Người bệnh","popup.opt4":"Phục hồi chức năng",
     "popup.note":"Câu trả lời giúp chúng tôi gợi ý dịch vụ phù hợp hơn cho bạn.",
     "footer.tagline":"Kết nối chăm sóc & phục hồi chức năng tại nhà, tận tâm và tin cậy.",
-    "footer.servicesTitle":"Dịch vụ","footer.contactTitle":"Liên hệ","footer.legalTitle":"Pháp lý","footer.service1":"Chăm sóc em bé & trẻ nhỏ","footer.service2":"Chăm sóc người già & người bệnh","footer.service3":"Chăm sóc sau sinh","footer.service4":"Trẻ tự kỷ, ADHD, chậm nói","footer.service5":"Vật lý trị liệu & phục hồi chức năng","footer.location":"71 Nguyễn Chánh, Liên Chiểu, Đà Nẵng","footer.terms":"Điều khoản sử dụng","footer.privacy":"Chính sách bảo mật",    "contact.phone":"Xem số điện thoại","contact.zalo":"Nhắn Zalo","phone.callNow":"Gọi ngay (0932 558 788)","phone.eyebrow":"LIÊN HỆ JOYCARE","phone.title":"Số điện thoại tư vấn","phone.text":"Bạn có thể gọi trực tiếp, sao chép số hoặc nhắn tin cho JoyCare qua Zalo hoặc Facebook.","phone.copy":"Sao chép số","comingSoon.title":"Dịch vụ và mạng lưới cộng tác viên đang được hoàn thiện","comingSoon.text":"JoyCare tạm thời chưa nhận đăng ký dịch vụ hoặc cộng tác viên. Chúng tôi ưu tiên xây dựng tiêu chuẩn chuyên môn cho sáu lĩnh vực trọng tâm trước khi mở rộng."
+    "footer.servicesTitle":"Dịch vụ","footer.contactTitle":"Liên hệ","footer.legalTitle":"Pháp lý","footer.service1":"Chăm sóc em bé & trẻ nhỏ","footer.service2":"Chăm sóc người già & người bệnh","footer.service3":"Chăm sóc sau sinh","footer.service4":"Trẻ tự kỷ, ADHD, chậm nói","footer.service5":"Vật lý trị liệu & phục hồi chức năng","footer.location":"71 Nguyễn Chánh, Liên Chiểu, Đà Nẵng","footer.terms":"Điều khoản sử dụng","footer.privacy":"Chính sách bảo mật",    "contact.phone":"Xem số điện thoại","contact.zalo":"Nhắn Zalo","phone.callNow":"Gọi ngay (0932 558 788)","phone.eyebrow":"LIÊN HỆ JOYCARE","phone.title":"Số điện thoại tư vấn","phone.text":"Bạn có thể gọi trực tiếp, sao chép số hoặc nhắn tin cho JoyCare qua Zalo hoặc Facebook.","phone.copy":"Sao chép số","comingSoon.title":"Dịch vụ và mạng lưới cộng tác viên đang được hoàn thiện","comingSoon.text":"JoyCare đang hoàn thiện chuyên môn cho sáu lĩnh vực trọng tâm và thu thập nhu cầu. Bạn cứ để lại thông tin, chúng tôi sẽ liên hệ khi triển khai phù hợp."
   },
   en: {
     "nav.services":"Services","nav.process":"Process","nav.reviews":"Reviews",
-    "nav.forCustomer":"Find a caregiver","nav.forCaregiver":"Become a caregiver","nav.cta":"Explore services","nav.contact":"Contact us","nav.register":"Register for advice",
+    "nav.forCustomer":"Explore services","nav.forCaregiver":"Become a caregiver","nav.cta":"Explore services","nav.contact":"Contact us","nav.register":"Get updates",
     "hero.eyebrow":"VIETNAM'S LEADING HOME CARE PLATFORM",
     "hero.title":"<span class=\"hero-title-line\">Specialised care &amp;</span><span class=\"hero-title-line\">intervention at home</span>",
     "hero.subtitle":"JoyCare.vn is focused on developing specialised care and intervention services for postpartum mothers, autism, ADHD, speech delay, physical therapy, and rehabilitation.",
@@ -819,11 +819,11 @@ const translations = {
     "hero.stat1":"Specialised focus areas","hero.stat2":"Knowledge articles","hero.stat3":"Home-based care in Da Nang",
     "doors.eyebrow":"WHERE ARE YOU IN THIS STORY?","doors.title":"Choose your door",
     "doors.customerTitle":"Families needing care",
-    "doors.customerDesc":"Find the right caregiver for babies, elderly parents, patients, or rehabilitation needs — verified and quality-monitored.",
-    "doors.customerCta":"Sign up to find a caregiver →",
+    "doors.customerDesc":"Share your home-care needs — JoyCare is preparing its network and will contact you when a suitable service opens.",
+    "doors.customerCta":"Get updates →",
     "doors.caregiverTitle":"Professional caregivers",
-    "doors.caregiverDesc":"Join JoyCare's network and get matched to jobs suited to your expertise — nursing, physical therapy, early-intervention teaching, and more.",
-    "doors.caregiverCta":"Register as a caregiver →",
+    "doors.caregiverDesc":"Join JoyCare's preparation network — nursing, physical therapy, early-intervention teaching, and more.",
+    "doors.caregiverCta":"Register as preparation collaborator →",
     "services.eyebrow":"OUR SERVICES","services.title":"The right care, for the right need",
     "services.subtitle":"Every age and every condition needs a different kind of care. JoyCare matches by real expertise.",
     "services.focusText":"<strong class=\"text-teal-deep\">Current focus:</strong> support for children with autism (ASD), ADHD and speech delay; physical therapy, rehabilitation and postpartum care in Da Nang.","services.register":"Register your needs",
@@ -836,14 +836,14 @@ const translations = {
     "blog.subtitle":"Care knowledge, rehabilitation tips, and stories from the JoyCare network.",
     "blog.readMore":"Read more →","blog.empty":"No posts yet — check back soon!",
     "blog.back":"Back to Blog","blog.filtering":"Filtering by","blog.clearFilter":"Clear filter",
-    "customerForm.eyebrow":"FOR FAMILIES","customerForm.title":"Register to find a caregiver",
-    "customerForm.subtitle":"Fill in your details — our team will contact you within 30 minutes.",
+    "customerForm.eyebrow":"FOR FAMILIES","customerForm.title":"Get updates (Families)",
+    "customerForm.subtitle":"Leave your details — JoyCare will share resources and contact you when we open in your area.",
     "customerForm.name":"Full name","customerForm.phone":"Phone number","customerForm.service":"Service needed",
     "customerForm.servicePlaceholder":"-- Select a service --","customerForm.city":"Area","customerForm.schedule":"Schedule",
     "customerForm.fulltime":"Full-time","customerForm.parttime":"Part-time","customerForm.hourly":"Hourly",
     "customerForm.notes":"Additional notes","customerForm.submit":"Submit registration","customerForm.schedulePlaceholder":"-- Select a schedule --","customerForm.consultation":"I need advice first","customerForm.cityPlaceholder":"For example: Hai Chau, Da Nang","customerForm.notesPlaceholder":"Your needs, preferred timing, or anything JoyCare should know",
-    "caregiverForm.eyebrow":"FOR CAREGIVERS","caregiverForm.title":"Register as a caregiver",
-    "caregiverForm.subtitle":"Join JoyCare's network and get matched to jobs suited to your expertise.",
+    "caregiverForm.eyebrow":"FOR CAREGIVERS","caregiverForm.title":"Register as preparation collaborator",
+    "caregiverForm.subtitle":"Join the preparation network — JoyCare will contact you for an interview when suitable.",
     "caregiverForm.name":"Full name","caregiverForm.phone":"Phone number","caregiverForm.experience":"Experience (years)",
     "caregiverForm.specialty":"Specialty","caregiverForm.specialtyPlaceholder":"-- Select specialty --",
     "caregiverForm.city":"Working area","caregiverForm.certificate":"Relevant certificates/qualifications","caregiverForm.submit":"Submit registration","caregiverForm.cityPlaceholder":"For example: Son Tra, Da Nang","caregiverForm.certificatePlaceholder":"List relevant qualifications, certificates or experience",
@@ -855,7 +855,7 @@ const translations = {
     "popup.opt1":"Baby / young child","popup.opt2":"Elderly","popup.opt3":"Patient","popup.opt4":"Rehabilitation",
     "popup.note":"Your answer helps us recommend the right service for you.",
     "footer.tagline":"Connecting home care & rehabilitation, with dedication and trust.",
-    "footer.servicesTitle":"Services","footer.contactTitle":"Contact","footer.legalTitle":"Legal","footer.service1":"Baby & young child care","footer.service2":"Elderly & patient care","footer.service3":"Postpartum care","footer.service4":"Autism, ADHD & speech delay","footer.service5":"Physical therapy & rehabilitation","footer.location":"71 Nguyen Chanh, Lien Chieu, Da Nang","footer.terms":"Terms of use","footer.privacy":"Privacy policy","contact.phone":"View phone number","contact.zalo":"Message on Zalo","phone.callNow":"Call now (0932 558 788)","phone.eyebrow":"CONTACT JOYCARE","phone.title":"Advice hotline","phone.text":"You can call directly, copy the number or message JoyCare via Zalo or Facebook.","phone.copy":"Copy number","comingSoon.title":"Services and our professional network are being prepared","comingSoon.text":"JoyCare is not yet accepting service or caregiver registrations. We are prioritising professional standards across our six focus areas before expanding."
+    "footer.servicesTitle":"Services","footer.contactTitle":"Contact","footer.legalTitle":"Legal","footer.service1":"Baby & young child care","footer.service2":"Elderly & patient care","footer.service3":"Postpartum care","footer.service4":"Autism, ADHD & speech delay","footer.service5":"Physical therapy & rehabilitation","footer.location":"71 Nguyen Chanh, Lien Chieu, Da Nang","footer.terms":"Terms of use","footer.privacy":"Privacy policy","contact.phone":"View phone number","contact.zalo":"Message on Zalo","phone.callNow":"Call now (0932 558 788)","phone.eyebrow":"CONTACT JOYCARE","phone.title":"Advice hotline","phone.text":"You can call directly, copy the number or message JoyCare via Zalo or Facebook.","phone.copy":"Copy number","comingSoon.title":"Services and our professional network are being prepared","comingSoon.text":"JoyCare is preparing professional standards across six focus areas and collecting needs. Leave your details and we will contact you when a suitable service opens."
   }
 };
 let currentLang = localStorage.getItem('joycare_lang') || 'vi';
@@ -1130,7 +1130,7 @@ document.getElementById('customerForm').addEventListener('submit', e=>
 
 document.getElementById('caregiverForm').addEventListener('submit', e=>
   handleFormSubmit(e, 'caregiver',
-    'Đăng ký đã được gửi. JoyCare sẽ xác nhận và liên hệ với bạn sớm.',
+    'Cảm ơn bạn! JoyCare đã ghi nhận nhu cầu và sẽ liên hệ khi triển khai phù hợp.',
     'Your registration has been sent. JoyCare will confirm it and contact you soon.'));
 
 document.getElementById('quickSurveyForm').addEventListener('submit', e=>
