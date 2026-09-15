@@ -12,8 +12,14 @@
     "tags": "sau-sinh,hai-chau,da-nang,cham-soc-tai-nha",
     "coverImage": "/assets/blog/cham-soc-sau-sinh.jpg",
     "faqs": [
-      {"question": "Gia đình nên chuẩn bị gì trước khi có người hỗ trợ?", "answer": "Nên thống nhất nhu cầu ưu tiên, khung giờ phù hợp, tình trạng sức khỏe cần lưu ý và chuẩn bị khu vực chăm bé gọn, đủ ánh sáng."},
-      {"question": "Khi nào mẹ cần liên hệ cơ sở y tế?", "answer": "Khi có sốt, đau tăng, chảy máu nhiều, khó thở, đau ngực, vết mổ bất thường hoặc bất kỳ triệu chứng khiến gia đình lo lắng."}
+      {
+        "question": "Gia đình nên chuẩn bị gì trước khi có người hỗ trợ?",
+        "answer": "Nên thống nhất nhu cầu ưu tiên, khung giờ phù hợp, tình trạng sức khỏe cần lưu ý và chuẩn bị khu vực chăm bé gọn, đủ ánh sáng."
+      },
+      {
+        "question": "Khi nào mẹ cần liên hệ cơ sở y tế?",
+        "answer": "Khi có sốt, đau tăng, chảy máu nhiều, khó thở, đau ngực, vết mổ bất thường hoặc bất kỳ triệu chứng khiến gia đình lo lắng."
+      }
     ],
     "content": "<p>Với những gia đình đang tìm hiểu <strong>chăm sóc sau sinh tại nhà phường Hải Châu, Đà Nẵng</strong>, điều quan trọng nhất không phải là làm thật nhiều việc cho mẹ và bé, mà là sắp xếp đúng những việc cần thiết trong từng ngày. Phường Hải Châu có mật độ sinh hoạt, làm việc và di chuyển cao; một lịch hỗ trợ rõ ràng giúp người thân giảm bớt việc vặt để mẹ có thời gian hồi phục.</p><h2>Ba nhu cầu nên được ưu tiên</h2><h3>1. Mẹ được nghỉ theo những khoảng ngắn nhưng liền mạch</h3><p>Người nhà có thể luân phiên bế bé sau cữ ăn, chuẩn bị nước và đồ dùng trong tầm tay, xử lý việc nhà cơ bản hoặc tiếp nhận đồ giao đến. Mục tiêu là để mẹ không phải đứng lên liên tục khi đang mệt, nhất là giai đoạn đầu sau sinh hoặc sau sinh mổ.</p><h3>2. Em bé có khu vực chăm sóc gọn và an toàn</h3><p>Hãy để tã, khăn, quần áo, nước rửa tay và sổ theo dõi cữ bú tại một vị trí cố định. Không gian cần khô ráo, đủ sáng, lối đi không vướng dây điện hay đồ đạc. Người hỗ trợ chỉ thực hiện những việc đã được gia đình và nhân viên y tế hướng dẫn rõ.</p><h3>3. Gia đình có một đầu mối trao đổi</h3><p>Viết ngắn nhu cầu trong ngày: giờ mẹ cần nghỉ, giờ bé bú, việc nhà cần xử lý và các lưu ý sức khỏe. Cách làm này tránh việc nhiều người cùng hỏi mẹ hoặc bỏ sót việc quan trọng. Khi cần hỗ trợ ngoài giờ, gia đình nên thống nhất trước người liên hệ.</p><h2>Checklist trước khi sắp xếp hỗ trợ tại nhà</h2><ul><li>Trao đổi tình trạng sức khỏe của mẹ, chỉ định của bác sĩ và các việc gia đình không muốn người hỗ trợ thực hiện.</li><li>Chọn khung giờ thuận tiện với sinh hoạt tại nhà, đặc biệt nếu ở chung cư hoặc nhà có chỗ đỗ xe hạn chế.</li><li>Chuẩn bị số điện thoại người thân, cơ sở y tế và thuốc đang dùng (nếu có).</li><li>Thống nhất cách cập nhật: ghi chép cữ bú, việc đã làm và những thay đổi cần báo lại.</li></ul><h2>Dấu hiệu không nên chờ đợi</h2><p>Hỗ trợ tại nhà không thay thế theo dõi y tế. Nếu mẹ sốt, đau tăng, ra máu nhiều, khó thở, đau ngực, vết mổ bất thường hoặc có tâm trạng buồn bã, lo âu kéo dài, gia đình cần liên hệ cơ sở y tế. Đây là bước ưu tiên hơn bất kỳ lịch chăm sóc nào.</p><h2>JoyCare đang chuẩn bị dịch vụ tại Đà Nẵng</h2><p>JoyCare hiện xây dựng tiêu chuẩn chuyên môn và quy trình kết nối người chăm sóc tại nhà. Bài viết nhằm giúp các gia đình ở phường Hải Châu chuẩn bị nhu cầu rõ ràng trước khi dịch vụ mở rộng; không thay thế tư vấn hoặc chỉ định của bác sĩ.</p>"
   },
@@ -30,8 +36,14 @@
     "tags": "nguoi-cao-tuoi,hoa-cuong,da-nang,cham-soc-tai-nha",
     "coverImage": "/assets/joycare-hero-care.jpg",
     "faqs": [
-      {"question": "Nên mô tả nhu cầu chăm sóc như thế nào?", "answer": "Hãy nêu khả năng tự vận động, giờ ăn ngủ, việc cần hỗ trợ, bệnh nền, lịch tái khám và điều gia đình muốn theo dõi hằng ngày."},
-      {"question": "Người hỗ trợ tại nhà có thay thế điều dưỡng hoặc bác sĩ không?", "answer": "Không. Mọi dấu hiệu bất thường hoặc hướng dẫn điều trị cần được trao đổi với cơ sở y tế và người có chuyên môn phù hợp."}
+      {
+        "question": "Nên mô tả nhu cầu chăm sóc như thế nào?",
+        "answer": "Hãy nêu khả năng tự vận động, giờ ăn ngủ, việc cần hỗ trợ, bệnh nền, lịch tái khám và điều gia đình muốn theo dõi hằng ngày."
+      },
+      {
+        "question": "Người hỗ trợ tại nhà có thay thế điều dưỡng hoặc bác sĩ không?",
+        "answer": "Không. Mọi dấu hiệu bất thường hoặc hướng dẫn điều trị cần được trao đổi với cơ sở y tế và người có chuyên môn phù hợp."
+      }
     ],
     "content": "<p>Khi tìm hiểu về <strong>người chăm sóc người cao tuổi tại nhà phường Hòa Cường, Đà Nẵng</strong>, gia đình thường quan tâm nhất đến sự an toàn, cách giao tiếp và khả năng duy trì nếp sinh hoạt quen thuộc cho ông bà. Chuẩn bị thông tin rõ ràng từ đầu giúp việc hỗ trợ phù hợp hơn, đồng thời giảm áp lực cho người thân đang đi làm hoặc sống ở xa.</p><h2>Bắt đầu từ khả năng sinh hoạt hiện tại</h2><p>Không nên chỉ ghi “cần người chăm”. Hãy quan sát người thân có thể tự làm điều gì và cần hỗ trợ ở đâu: tự đi lại hay cần có người đi cùng, tự ăn uống hay cần chuẩn bị bữa, có cần nhắc giờ uống thuốc theo đơn hay không, có nguy cơ vấp ngã không. Cách mô tả cụ thể giúp xác định đúng mức độ hỗ trợ cần thiết.</p><h2>Những việc gia đình có thể phân công rõ</h2><ul><li>Chuẩn bị bữa ăn, nước uống và nhắc lịch sinh hoạt theo thói quen gia đình.</li><li>Đồng hành khi đi lại trong nhà, giữ lối đi khô ráo và không có vật cản.</li><li>Trò chuyện, đọc sách, cùng tập vận động nhẹ khi đã có hướng dẫn phù hợp.</li><li>Ghi nhận tình trạng ăn, ngủ, tâm trạng hoặc thay đổi đáng chú ý để báo người nhà.</li></ul><p>Những công việc liên quan đến thuốc, vết thương, kỹ thuật y tế hoặc triệu chứng bất thường cần tuân thủ chỉ dẫn của cơ sở y tế, không tự xử lý theo kinh nghiệm truyền miệng.</p><h2>Bàn giao thông tin theo một trang ngắn</h2><p>Một tờ ghi chú đặt ở vị trí riêng có thể gồm: số điện thoại người thân, bệnh nền, dị ứng, lịch tái khám, thói quen ăn uống, việc cần tránh và cách liên hệ khẩn. Với gia đình ở phường Hòa Cường, việc này còn hữu ích khi nhiều thành viên luân phiên hỗ trợ hoặc cần di chuyển giữa nhà và bệnh viện.</p><h2>Khi nào cần liên hệ y tế ngay?</h2><p>Đau ngực, khó thở, ngất, lú lẫn mới xuất hiện, yếu liệt đột ngột, té ngã kèm đau nhiều hoặc bất kỳ thay đổi đáng lo nào cần được liên hệ y tế. Người chăm sóc tại nhà không thay thế bác sĩ, điều dưỡng hay cấp cứu.</p><h2>Chuẩn bị cho giai đoạn JoyCare mở rộng</h2><p>JoyCare đang xây dựng mạng lưới và tiêu chuẩn phục vụ tại Đà Nẵng. Gia đình có thể dùng checklist này để xác định nhu cầu chăm sóc người cao tuổi tại nhà một cách tôn trọng, an toàn và dễ phối hợp hơn khi dịch vụ sẵn sàng.</p>"
   },
@@ -48,8 +60,14 @@
     "tags": "vat-ly-tri-lieu,phuc-hoi-chuc-nang,an-hai,da-nang",
     "coverImage": "/assets/blog/phuc-hoi-chuc-nang-tai-nha.jpg",
     "faqs": [
-      {"question": "Có thể tự chọn bài tập trên mạng để tập tại nhà không?", "answer": "Không nên. Bài tập cần phù hợp với chẩn đoán, thể trạng và chỉ định của người có chuyên môn."},
-      {"question": "Không gian tập cần có gì?", "answer": "Sàn khô, đủ sáng, lối đi trống, ghế chắc chắn và các dụng cụ được chuyên viên chỉ định."}
+      {
+        "question": "Có thể tự chọn bài tập trên mạng để tập tại nhà không?",
+        "answer": "Không nên. Bài tập cần phù hợp với chẩn đoán, thể trạng và chỉ định của người có chuyên môn."
+      },
+      {
+        "question": "Không gian tập cần có gì?",
+        "answer": "Sàn khô, đủ sáng, lối đi trống, ghế chắc chắn và các dụng cụ được chuyên viên chỉ định."
+      }
     ],
     "content": "<p>Tìm kiếm <strong>vật lý trị liệu tại nhà phường An Hải, Đà Nẵng</strong> thường xuất phát từ mong muốn để người bệnh tập trong môi trường quen thuộc. Đây có thể là lựa chọn thuận tiện, nhưng an toàn và chỉ định chuyên môn luôn cần đi trước. Một buổi tập tốt không nhất thiết cần nhiều dụng cụ; điều cần là mục tiêu rõ và cách thực hiện đúng.</p><h2>Chuẩn bị một góc tập an toàn</h2><p>Chọn nơi sàn khô, đủ sáng, không có thảm trơn, dây điện hoặc bàn ghế vướng lối. Một chiếc ghế vững, không bánh xe, nước uống và điện thoại để gần là những chuẩn bị cơ bản. Nếu ở căn hộ hoặc nhà có không gian hẹp tại phường An Hải, có thể dọn một khoảng vừa đủ để quay người và di chuyển an toàn, thay vì cố tập trong hành lang chật.</p><h2>Ghi trước mục tiêu và tình trạng trong ngày</h2><p>Gia đình nên nêu mục tiêu đang theo đuổi: đứng lên ngồi xuống vững hơn, đi từ giường đến ghế an toàn hơn, cử động tay thuận hơn hoặc trở lại một hoạt động hằng ngày. Trước buổi tập, ghi lại đau, chóng mặt, mệt bất thường, sốt hoặc thay đổi thuốc. Những thông tin này giúp người có chuyên môn điều chỉnh buổi tập phù hợp.</p><h2>Vai trò đúng của người nhà</h2><p>Người nhà có thể chuẩn bị không gian, nhắc lịch và hỗ trợ đúng vị trí khi đã được hướng dẫn. Không kéo tay, đỡ người bệnh theo cảm tính hoặc tăng số lần tập chỉ vì muốn tiến bộ nhanh. Mỗi cơ thể có tốc độ hồi phục khác nhau; tập quá sức có thể làm giảm an toàn và động lực.</p><h2>Dừng tập khi có dấu hiệu cảnh báo</h2><p>Đau ngực, khó thở, ngất, đau tăng rõ, sưng bất thường, yếu liệt mới xuất hiện hoặc bất kỳ dấu hiệu khiến gia đình lo lắng đều cần dừng tập và liên hệ y tế. Bài viết không thay thế đánh giá của bác sĩ hoặc kỹ thuật viên vật lý trị liệu.</p><h2>Thông tin nên sẵn sàng khi đăng ký nhu cầu</h2><p>Hãy chuẩn bị chẩn đoán, giấy ra viện hoặc hướng dẫn đang có, mục tiêu sinh hoạt, khả năng vận động hiện tại và thời gian gia đình có thể đồng hành. JoyCare đang chuẩn bị quy trình kết nối tại Đà Nẵng; thông tin rõ ràng sẽ giúp giai đoạn tư vấn ban đầu hiệu quả hơn khi dịch vụ mở rộng.</p>"
   },
@@ -66,8 +84,14 @@
     "tags": "cham-noi,thanh-khe,da-nang,tre-em",
     "coverImage": "/assets/blog/cham-noi-tai-nha.jpg",
     "faqs": [
-      {"question": "Gia đình có thể bắt đầu hỗ trợ trẻ chậm nói như thế nào?", "answer": "Bắt đầu bằng việc theo sở thích của trẻ, nói câu ngắn về hoạt động đang diễn ra, chờ phản hồi và lặp lại đều đặn."},
-      {"question": "Khi nào nên tìm tư vấn chuyên môn?", "answer": "Khi lo lắng kéo dài, trẻ giảm kỹ năng đã có, ít phản ứng với âm thanh hoặc khó khăn giao tiếp ảnh hưởng rõ đến sinh hoạt."}
+      {
+        "question": "Gia đình có thể bắt đầu hỗ trợ trẻ chậm nói như thế nào?",
+        "answer": "Bắt đầu bằng việc theo sở thích của trẻ, nói câu ngắn về hoạt động đang diễn ra, chờ phản hồi và lặp lại đều đặn."
+      },
+      {
+        "question": "Khi nào nên tìm tư vấn chuyên môn?",
+        "answer": "Khi lo lắng kéo dài, trẻ giảm kỹ năng đã có, ít phản ứng với âm thanh hoặc khó khăn giao tiếp ảnh hưởng rõ đến sinh hoạt."
+      }
     ],
     "content": "<p>Gia đình tìm hiểu <strong>hỗ trợ trẻ chậm nói tại nhà phường Thanh Khê, Đà Nẵng</strong> thường muốn biết nên bắt đầu từ đâu mà không tạo áp lực cho con. Câu trả lời thường nằm ở những khoảnh khắc rất quen: khi ăn, tắm, cất đồ chơi, đi dạo và đọc sách tranh. Điều cần xây là số lượt giao tiếp hai chiều, không phải ép trẻ nói thật nhiều từ trong một lần.</p><h2>Quan sát trước khi đặt mục tiêu</h2><p>Trong khoảng một tuần, phụ huynh có thể ghi ngắn cách con bày tỏ nhu cầu: chỉ tay, kéo tay người lớn, nhìn, tạo âm thanh hay dùng từ. Ghi cả những điều con thích và lúc con dễ hợp tác. Những quan sát này giúp mục tiêu thực tế hơn, đồng thời rất hữu ích khi trao đổi với chuyên viên.</p><h2>Ba hoạt động nhỏ có thể lặp lại mỗi ngày</h2><h3>Nói theo hoạt động con đang chọn</h3><p>Nếu con cầm xe, người lớn có thể nói “xe chạy”; nếu con mở hộp, nói “mở hộp”. Câu ngắn, lặp lại và đúng thời điểm thường dễ tiếp nhận hơn một chuỗi câu hỏi.</p><h3>Đọc sách tranh với khoảng chờ</h3><p>Chọn tranh rõ, ít chi tiết. Chỉ một hoặc hai trang, sau đó dừng vài giây để con nhìn, chỉ hoặc tạo âm. Một phản hồi bằng cử chỉ cũng là lượt giao tiếp đáng ghi nhận.</p><h3>Tạo lượt chơi qua lại</h3><p>Người lớn làm một lượt, chờ con làm một lượt. Có thể là thả bóng, xếp khối hoặc đẩy xe. Với gia đình bận rộn ở phường Thanh Khê, mỗi lượt chỉ vài phút nhưng lặp lại đều trong ngày thường bền vững hơn một buổi dài.</p><h2>Không nên tự kết luận chỉ từ một dấu hiệu</h2><p>Sự phát triển ngôn ngữ của mỗi trẻ khác nhau. Tuy vậy, khi trẻ giảm kỹ năng đã có, không phản ứng với âm thanh, ít đáp lại trong giao tiếp hoặc gia đình lo lắng kéo dài, nên tìm tư vấn y tế và chuyên môn phù hợp. Bài viết không thay thế đánh giá về thính giác, ngôn ngữ hay phát triển của trẻ.</p><h2>Chuẩn bị thông tin cho lần tư vấn đầu tiên</h2><p>Video ngắn về một tình huống con giao tiếp tốt và một tình huống khó, danh sách từ con đang dùng, lịch sinh hoạt và điều gia đình mong muốn thay đổi là những dữ liệu rất thiết thực. JoyCare đang xây dựng quy trình hỗ trợ tại Đà Nẵng; sự chuẩn bị này giúp gia đình chủ động hơn khi cần kết nối chuyên môn.</p>"
   },
@@ -84,8 +108,14 @@
     "tags": "tu-ky,adhd,cam-le,da-nang,tre-em",
     "coverImage": "/assets/blog/ho-tro-tre-rlptk.jpg",
     "faqs": [
-      {"question": "Có thể dùng cùng một kế hoạch cho mọi trẻ tự kỷ hoặc ADHD không?", "answer": "Không. Mỗi trẻ có điểm mạnh, nhu cầu giao tiếp, mức độ nhạy cảm và mục tiêu khác nhau; kế hoạch cần được cá nhân hóa."},
-      {"question": "Gia đình nên trao đổi gì với người hỗ trợ?", "answer": "Nên chia sẻ điều trẻ thích, yếu tố dễ quá tải, cách trẻ giao tiếp, lịch sinh hoạt và mục tiêu nhỏ mà gia đình đang ưu tiên."}
+      {
+        "question": "Có thể dùng cùng một kế hoạch cho mọi trẻ tự kỷ hoặc ADHD không?",
+        "answer": "Không. Mỗi trẻ có điểm mạnh, nhu cầu giao tiếp, mức độ nhạy cảm và mục tiêu khác nhau; kế hoạch cần được cá nhân hóa."
+      },
+      {
+        "question": "Gia đình nên trao đổi gì với người hỗ trợ?",
+        "answer": "Nên chia sẻ điều trẻ thích, yếu tố dễ quá tải, cách trẻ giao tiếp, lịch sinh hoạt và mục tiêu nhỏ mà gia đình đang ưu tiên."
+      }
     ],
     "content": "<p>Khi tìm kiếm <strong>hỗ trợ trẻ tự kỷ hoặc ADHD tại nhà phường Cẩm Lệ, Đà Nẵng</strong>, gia đình cần một kế hoạch gần với đời sống thật của con hơn là một danh sách bài tập chung cho mọi trẻ. Mục tiêu không phải khiến trẻ phải giống người khác, mà là giúp con giao tiếp, tham gia sinh hoạt và cảm thấy an toàn hơn trong môi trường gia đình.</p><h2>Tạo một ngày dễ dự đoán</h2><p>Bảng lịch bằng hình hoặc chữ ngắn cho các mốc quen thuộc như thức dậy, ăn sáng, đi học, chơi, tắm và ngủ có thể giúp trẻ biết điều gì đến tiếp theo. Khi có thay đổi, hãy báo trước bằng câu ngắn và cho thời gian chuyển tiếp. Điều này hữu ích với nhiều trẻ dễ căng thẳng khi lịch thay đổi đột ngột.</p><h2>Chia yêu cầu thành bước nhỏ</h2><p>Thay vì “con dọn phòng đi”, hãy nói “con bỏ xe vào hộp”, rồi chờ con thực hiện. Với trẻ có khó khăn chú ý, một yêu cầu ngắn, đúng lúc và có khoảng chờ thường hiệu quả hơn việc nhắc nhiều lần. Hãy ghi nhận chính hành động con làm được, ví dụ “con đã cất xe vào hộp”.</p><h2>Dựa vào sở thích để tạo tương tác</h2><p>Nếu trẻ thích nước, xe, xếp hình hay âm nhạc, người lớn có thể tham gia cùng con trước, sau đó tạo lượt chơi qua lại. Khi trẻ quá tải, ưu tiên giảm kích thích, đến nơi yên tĩnh và chờ con bình tĩnh thay vì ép tiếp tục hoạt động.</p><h2>Phối hợp cùng chuyên môn và trường học</h2><p>Gia đình ở phường Cẩm Lệ có thể lưu lại các tình huống cụ thể: lúc trẻ giao tiếp tốt, lúc khó chuyển hoạt động, điều giúp trẻ bình tĩnh và mục tiêu đang cần hỗ trợ. Đây là nền tảng tốt để trao đổi nhất quán với bác sĩ, nhà tâm lý, chuyên viên can thiệp hoặc giáo viên. Không nên tự chẩn đoán hoặc thay thế đánh giá chuyên môn bằng nội dung trên mạng.</p><h2>JoyCare đang chuẩn bị dịch vụ tại Đà Nẵng</h2><p>JoyCare hiện ưu tiên xây dựng tiêu chuẩn chuyên môn cho lĩnh vực hỗ trợ trẻ em. Bài viết giúp gia đình chuẩn bị nhu cầu và câu hỏi phù hợp trước khi dịch vụ mở rộng tại khu vực Đà Nẵng.</p>"
   },
@@ -172,8 +202,14 @@
     "tags": "tu-ky,rlptk,can-thiep-som,da-nang",
     "coverImage": "/assets/blog/ho-tro-tre-rlptk.jpg",
     "faqs": [
-      {"question": "Trẻ ít nói có phải tự kỷ không?", "answer": "Chưa chắc. Chậm nói có nhiều nguyên nhân như môi trường ít giao tiếp hoặc vấn đề thính lực. Chỉ khi kèm các dấu hiệu khác như ít giao tiếp mắt, ít chia sẻ niềm vui hay hành vi lặp lại thì gia đình nên cho trẻ đi đánh giá chuyên sâu."},
-      {"question": "Bao nhiêu tuổi thì nên cho trẻ đi đánh giá?", "answer": "Ngay khi cha mẹ lo lắng, không cần chờ đủ tuổi. Sàng lọc phát triển có thể thực hiện từ khoảng 18 tháng tuổi; can thiệp càng sớm hiệu quả càng cao."}
+      {
+        "question": "Trẻ ít nói có phải tự kỷ không?",
+        "answer": "Chưa chắc. Chậm nói có nhiều nguyên nhân như môi trường ít giao tiếp hoặc vấn đề thính lực. Chỉ khi kèm các dấu hiệu khác như ít giao tiếp mắt, ít chia sẻ niềm vui hay hành vi lặp lại thì gia đình nên cho trẻ đi đánh giá chuyên sâu."
+      },
+      {
+        "question": "Bao nhiêu tuổi thì nên cho trẻ đi đánh giá?",
+        "answer": "Ngay khi cha mẹ lo lắng, không cần chờ đủ tuổi. Sàng lọc phát triển có thể thực hiện từ khoảng 18 tháng tuổi; can thiệp càng sớm hiệu quả càng cao."
+      }
     ],
     "content": "<p>Với nhiều gia đình, <strong>dấu hiệu trẻ tự kỷ nhẹ</strong> không rõ ràng như cha mẹ tưởng. Trẻ vẫn ăn ngủ, vẫn lớn lên từng ngày, chỉ có vài điểm hơi khác trong giao tiếp và chơi đùa mà người lớn dễ cho qua. Can thiệp càng sớm, trẻ càng có nhiều cơ hội tiến bộ, nên nhận biết sớm luôn là bước quan trọng nhất.</p><h2>7 dấu hiệu trẻ tự kỷ nhẹ cha mẹ nên lưu ý</h2><h3>1. Ít giao tiếp bằng mắt</h3><p>Trẻ ít nhìn vào mắt người đối diện khi trò chuyện, gọi tên nhiều lần mới quay lại. Đây là một trong những dấu hiệu trẻ tự kỷ nhẹ xuất hiện sớm nhất, đôi khi từ trước 12 tháng tuổi.</p><h3>2. Chậm nói hoặc ít dùng lời để giao tiếp</h3><p>Trẻ nói được ít từ so với tuổi, ít ê a, ít chỉ tay để chia sẻ điều mình thích. Nếu lo về ngôn ngữ, gia đình có thể đọc thêm <a href=\"/blog/tre-cham-noi-dau-hieu-va-cach-dong-hanh-tai-nha/\">dấu hiệu chậm nói và cách đồng hành tại nhà</a>.</p><h3>3. Ít chơi giả vờ, thích chơi một mình</h3><p>Trẻ ít chơi đóng vai, ít rủ bạn, thường xếp đồ vật thành hàng hoặc xoay tròn đồ chơi thay vì chơi đúng chức năng.</p><h3>4. Ít chia sẻ niềm vui</h3><p>Trẻ ít khoe đồ chơi mới, ít kéo tay cha mẹ xem điều thú vị, ít cười đáp lại khi được cười cùng.</p><h3>5. Nhạy cảm với âm thanh, ánh sáng hoặc chạm</h3><p>Trẻ bịt tai khi nghe tiếng ồn, khó chịu với quần áo có nhãn mác, kén ăn theo kết cấu món ăn.</p><h3>6. Thích nếp sinh hoạt cố định</h3><p>Trẻ khó chịu khi thay đổi lịch trình, đi đúng một con đường, ăn đúng một món theo cùng một cách.</p><h3>7. Có hành vi lặp đi lặp lại</h3><p>Vẫy tay, nhón chân, xoay người hoặc lặp lại một câu nói nhiều lần trong ngày.</p><h2>Cha mẹ nên theo dõi thế nào tại nhà?</h2><ul><li>Ghi lại cụ thể: hành vi nào, xuất hiện khi nào, kéo dài bao lâu, thay vì chỉ nhớ cảm giác chung chung.</li><li>Quay video ngắn trong sinh hoạt hằng ngày để tiện trao đổi với chuyên gia.</li><li>Tăng thời gian chơi cùng con: gọi tên, chờ con phản hồi, khen mỗi tương tác nhỏ.</li><li>So sánh với mốc phát triển theo tuổi, không so với anh chị em hay trẻ hàng xóm.</li></ul><h2>Khi nào cần gặp chuyên gia?</h2><p>Nên đưa trẻ đi đánh giá khi có từ hai dấu hiệu trở lên kéo dài, trẻ thoái lui kỹ năng đã có, hoặc gia đình lo lắng dù chưa rõ nguyên nhân. Đánh giá sớm không có nghĩa là dán nhãn cho trẻ, mà giúp gia đình biết cần hỗ trợ gì và bắt đầu từ đâu. Gia đình có thể tìm hiểu thêm <a href=\"/blog/ho-tro-tre-roi-loan-pho-tu-ky-tai-nha/\">cách hỗ trợ trẻ rối loạn phổ tự kỷ tại nhà</a> để chuẩn bị nếp sinh hoạt phù hợp.</p><h2>JoyCare đồng hành cùng gia đình tại Đà Nẵng</h2><p>JoyCare đang xây dựng đội ngũ giáo viên can thiệp sớm và quy trình kết nối hỗ trợ tại nhà. Gia đình có thể <a href=\"/#dang-ky\">chia sẻ nhu cầu để được liên hệ tư vấn</a>. Bài viết chỉ mang tính tham khảo, không thay thế chẩn đoán của bác sĩ hoặc chuyên gia phát triển trẻ em.</p>"
   },
@@ -190,9 +226,71 @@
     "tags": "phuong-phap-day,tu-ky,adhd,can-thiep-som",
     "coverImage": "/assets/blog/ho-tro-adhd-tai-nha.jpg",
     "faqs": [
-      {"question": "Nên chọn một hay kết hợp nhiều phương pháp?", "answer": "Nên kết hợp linh hoạt theo từng mục tiêu nhỏ. Ví dụ dùng lịch trình tranh cho nếp sinh hoạt, khen thưởng cho hành vi mong muốn và chơi cùng con để tăng tương tác. Chuyên gia can thiệp sẽ giúp gia đình sắp xếp thứ tự ưu tiên."},
-      {"question": "Áp dụng bao lâu thì thấy tiến bộ?", "answer": "Thường cần vài tuần đến vài tháng thực hiện đều đặn mỗi ngày mới đánh giá được. Gia đình nên ghi lại cụ thể hành vi trước và sau khi áp dụng, thay vì chỉ cảm nhận chung chung, để trao đổi với chuyên gia."}
+      {
+        "question": "Nên chọn một hay kết hợp nhiều phương pháp?",
+        "answer": "Nên kết hợp linh hoạt theo từng mục tiêu nhỏ. Ví dụ dùng lịch trình tranh cho nếp sinh hoạt, khen thưởng cho hành vi mong muốn và chơi cùng con để tăng tương tác. Chuyên gia can thiệp sẽ giúp gia đình sắp xếp thứ tự ưu tiên."
+      },
+      {
+        "question": "Áp dụng bao lâu thì thấy tiến bộ?",
+        "answer": "Thường cần vài tuần đến vài tháng thực hiện đều đặn mỗi ngày mới đánh giá được. Gia đình nên ghi lại cụ thể hành vi trước và sau khi áp dụng, thay vì chỉ cảm nhận chung chung, để trao đổi với chuyên gia."
+      }
     ],
     "content": "<p>Khi <strong>dạy trẻ khuyết tật tại nhà</strong>, điều khó nhất với cha mẹ không phải là thiếu tình thương mà là thiếu phương pháp: dạy gì trước, dạy thế nào để con hợp tác, làm sao biết cách mình làm có đúng. Không có một phương pháp duy nhất cho mọi trẻ, nhưng có những cách đã được nhiều chuyên gia can thiệp sớm sử dụng và gia đình hoàn toàn có thể bắt đầu ngay tại nhà.</p><h2>1. Dán tranh lịch trình để con nhìn là hiểu</h2><p>Nói thì con không hiểu, cho con NHÌN thì con hiểu. Cách làm rất đơn giản: chụp ảnh hoặc vẽ từng việc trong ngày của con — ăn sáng, đánh răng, đi ngủ — rồi dán thành một hàng dọc trên tủ lạnh. Sáng dậy, chỉ vào tranh và nói: sáng nay mình làm cái này trước nhé. Xong việc nào, cho con tự gỡ tranh đó xuống. Con biết trước việc gì tới nên bớt cáu, bớt ăn vạ hẳn.</p><h2>2. Khen thưởng hành vi tích cực: ghi nhận đúng lúc</h2><p>Thay vì chỉ nhắc khi con làm sai, phương pháp này khen ngay khi con làm đúng để hành vi tốt lặp lại. Phần thưởng hiệu quả nhất là thứ con thật sự thích: sticker, 5 phút chơi món yêu thích, lời khen cụ thể.</p><p><strong>Ví dụ tại nhà:</strong> làm bảng sao với 3 mục tiêu nhỏ như ngồi vào bàn khi gọi, cất đồ chơi sau khi chơi. Mỗi lần đạt, dán một sao; đủ 10 sao đổi một hoạt động con thích. Khen cụ thể việc làm, ví dụ con cất xe vào hộp giỏi quá thay vì chỉ nói con ngoan.</p><h2>3. Chơi cùng con theo cách con muốn</h2><p>Thay vì bắt con chơi theo ý mình, cha mẹ tham gia vào trò chơi con đang chơi: con xếp xe thì mình xếp cùng, con gõ trống thì mình gõ theo. Khi con thấy vui, con sẽ bắt đầu nhìn, cười và giao tiếp nhiều hơn.</p><p><strong>Ví dụ tại nhà:</strong> dành 15 phút mỗi ngày ngồi xuống sàn chơi đúng món con thích, bắt chước hành động của con rồi chờ con phản ứng. Mọi giao tiếp mắt, tiếng cười hay cử chỉ của con đều đáng được đáp lại ngay.</p><h2>4. Đưa tranh để con nói khi chưa nói được</h2><p>Con chưa nói được không có nghĩa là con không có gì để nói. Cách làm: in 3–5 tấm thẻ hình những thứ con cần nhất — ly nước, cái bánh, quả bóng, cái bô — để chỗ con dễ lấy. Dạy con cầm thẻ đưa cho mẹ khi muốn. Mẹ nhận thẻ thì đưa ngay thứ đó, đồng thời nói to tên nó lên cho con nghe. Chỉ vài tuần, con sẽ hiểu: đưa tranh là được đáp ứng, không cần khóc lóc. Gia đình có thể đọc thêm <a href=\"/blog/tre-cham-noi-dau-hieu-va-cach-dong-hanh-tai-nha/\">cách đồng hành cùng trẻ chậm nói tại nhà</a>.</p><h2>5. Chia việc lớn thành bước nhỏ</h2><p>Việc lớn như mặc quần áo hay dọn phòng làm con sợ, việc nhỏ thì con dám làm. Cách làm: lấy việc đánh răng chia làm 4 bước, mỗi bước một tranh — 1 lấy bàn chải, 2 bóp kem, 3 chải, 4 súc miệng. Dạy từng bước một, xong bước nào khen ngay bước đó. Vừa làm vừa cho con sờ, ngửi kem vị dâu, cùng hát một bài ngắn — con nhớ lâu hơn nhiều so với chỉ nghe mẹ nói.</p><h2>Ba nguyên tắc chung khi áp dụng</h2><ul><li>Kiên trì một cách ít nhất 2–3 tuần trước khi đổi, vì trẻ cần thời gian làm quen.</li><li>Mỗi lần chỉ tập trung một mục tiêu nhỏ, mục tiêu đạt được thì ăn mừng cùng con.</li><li>Ghi chép ngắn gọn tiến triển để trao đổi với giáo viên và chuyên gia can thiệp.</li></ul><h2>Khi nào cần chuyên gia can thiệp sớm?</h2><p>Khi trẻ có nhiều khó khăn cùng lúc, thoái lui kỹ năng đã có, hoặc gia đình áp dụng đều đặn mà không thấy chuyển biến, nên cho trẻ đi đánh giá chuyên sâu. Gia đình có thể tìm hiểu thêm <a href=\"/blog/ho-tro-tre-roi-loan-pho-tu-ky-tai-nha/\">cách hỗ trợ trẻ rối loạn phổ tự kỷ</a> và <a href=\"/blog/dong-hanh-cung-tre-adhd-tai-nha/\">5 thói quen đồng hành cùng trẻ ADHD</a> để chuẩn bị trước buổi đánh giá.</p><h2>JoyCare đồng hành cùng gia đình tại Đà Nẵng</h2><p>JoyCare đang xây dựng đội ngũ giáo viên can thiệp sớm và quy trình kết nối hỗ trợ tại nhà theo từng phương pháp phù hợp với trẻ. Gia đình có thể <a href=\"/#dang-ky\">chia sẻ nhu cầu để được liên hệ tư vấn</a>. Bài viết chỉ mang tính tham khảo, không thay thế đánh giá và hướng dẫn của chuyên gia can thiệp.</p>"
+  },
+  {
+    "title": "JoyCare tìm cộng tác viên chăm sóc tại nhà ở Đà Nẵng (đợt chuẩn bị)",
+    "slug": "tuyen-cong-tac-vien-cham-soc-tai-nha-da-nang-dot-chuan-bi",
+    "date": "2026-09-15T10:30:00+07:00",
+    "order": 14,
+    "author": "JoyCare.vn",
+    "focusKeyword": "tuyển cộng tác viên chăm sóc tại nhà Đà Nẵng",
+    "seoTitle": "Tuyển CTV chăm sóc tại nhà Đà Nẵng (đợt chuẩn bị) | JoyCare",
+    "seoDescription": "JoyCare đang chuẩn bị mạng lưới CTV điều dưỡng, VLTL/PHCN, giáo viên can thiệp sớm tại Đà Nẵng. Xem vị trí, yêu cầu hồ sơ và cách đăng ký.",
+    "excerpt": "JoyCare đang chuẩn bị mạng lưới CTV tại Đà Nẵng: điều dưỡng, chăm sóc sau sinh, giáo viên can thiệp sớm và KTV VLTL/PHCN. Hồ sơ đạt được phỏng vấn và ưu tiên khi mở.",
+    "tags": "tuyen-dung,ctv,da-nang,cham-soc-tai-nha",
+    "coverImage": "/assets/blog/phuc-hoi-chuc-nang-tai-nha.jpg",
+    "faqs": [
+      {
+        "question": "Chưa có bằng cấp chuyên môn có đăng ký được không?",
+        "answer": "Được với nhóm chăm sóc chung nếu có kinh nghiệm thực tế và thái độ tốt. Nhóm vật lý trị liệu, ngôn ngữ trị liệu và can thiệp sớm bắt buộc có bằng cấp phù hợp."
+      },
+      {
+        "question": "Đăng ký rồi bao lâu được liên hệ?",
+        "answer": "JoyCare sàng lọc hồ sơ theo đợt và liên hệ phỏng vấn khi hồ sơ phù hợp với khu vực đang chuẩn bị mở. Hồ sơ đầy đủ, rõ ràng được ưu tiên."
+      },
+      {
+        "question": "CTV có phải đóng phí gì không?",
+        "answer": "Không. JoyCare không thu bất kỳ khoản phí đăng ký, đào tạo hay giữ ca nào của cộng tác viên."
+      }
+    ],
+    "content": "<p>JoyCare.vn đang trong giai đoạn chuẩn bị mạng lưới chăm sóc và can thiệp chuyên biệt tại nhà ở Đà Nẵng. Trước khi mở dịch vụ chính thức, chúng tôi tìm <strong>cộng tác viên (CTV) đợt chuẩn bị</strong> ở 4 nhóm chuyên môn dưới đây. Đây chưa phải đợt tuyển có ca làm ngay — hồ sơ đạt sẽ được phỏng vấn, chuẩn hóa và ưu tiên liên hệ khi JoyCare triển khai tại từng khu vực.</p><h2>4 nhóm CTV JoyCare đang tìm</h2><h3>1. Điều dưỡng / người chăm sóc</h3><p>Hỗ trợ em bé, người già, người bệnh tại nhà: ăn uống, vệ sinh, nhắc thuốc theo đơn, theo dõi và báo lại thay đổi cho gia đình. Ưu tiên người có bằng điều dưỡng, y sĩ hoặc kinh nghiệm chăm sóc thực tế.</p><h3>2. Chăm sóc sau sinh</h3><p>Hỗ trợ mẹ và bé những tuần đầu: chăm bé theo cữ, phụ việc nhà cơ bản, để mẹ có khoảng nghỉ liền mạch. Mọi vấn đề sức khỏe của mẹ và bé tuân thủ chỉ định của cơ sở y tế. Gia đình có thể đọc thêm <a href=\"/blog/cham-soc-sau-sinh-tai-nha-6-dieu-can-ho-tro/\">6 điều cần hỗ trợ khi chăm sóc sau sinh tại nhà</a>.</p><h3>3. Giáo viên can thiệp sớm / ngôn ngữ trị liệu</h3><p>Đồng hành cùng trẻ tự kỷ (RLPTK), ADHD, chậm nói tại nhà theo kế hoạch đã thống nhất với gia đình và chuyên môn phù hợp. Ưu tiên tốt nghiệp giáo dục đặc biệt, tâm lý, ngôn ngữ trị liệu hoặc đã làm việc với trẻ. Tham khảo thêm <a href=\"/blog/tre-tu-ky-nhe-7-dau-hieu-som-cha-me-de-bo-qua/\">7 dấu hiệu trẻ tự kỷ nhẹ</a> và <a href=\"/blog/tre-cham-noi-dau-hieu-va-cach-dong-hanh-tai-nha/\">dấu hiệu chậm nói và cách đồng hành</a>.</p><h3>4. Kỹ thuật viên VLTL / PHCN</h3><p>Hỗ trợ vận động tại nhà theo chỉ định: sau chấn thương, phẫu thuật, đột quỵ, người cao tuổi yếu vận động. Yêu cầu bằng cấp VLTL/PHCN và tuân thủ tuyệt đối chỉ định chuyên môn. Xem thêm <a href=\"/blog/vat-ly-tri-lieu-tai-nha-phuong-an-hai-da-nang/\">chuẩn bị an toàn cho vật lý trị liệu tại nhà</a>.</p><h2>Yêu cầu chung</h2><ul><li>Lý lịch rõ ràng, giấy tờ tùy thân và bằng cấp/chứng chỉ còn hiệu lực (bản chụp khi đăng ký, bản gốc khi phỏng vấn).</li><li>Sức khỏe phù hợp công việc chăm sóc, giao tiếp tôn trọng, đúng giờ, bảo mật thông tin gia đình.</li><li>Sống hoặc làm việc được tại Đà Nẵng, có phương tiện di chuyển.</li><li>Chưa có nhiều kinh nghiệm vẫn có thể đăng ký nhóm chăm sóc chung — JoyCare đánh giá cả thái độ và khả năng học việc.</li></ul><h2>Hồ sơ cần chuẩn bị</h2><ul><li>Họ tên, số điện thoại, khu vực làm việc được tại Đà Nẵng.</li><li>Số năm kinh nghiệm và mô tả ngắn 2-3 nhóm đối tượng đã từng hỗ trợ.</li><li>Bằng cấp, chứng chỉ liên quan (chụp ảnh rõ).</li></ul><h2>Quy trình 4 bước đợt chuẩn bị</h2><p><strong>Bước 1 — Gửi form:</strong> chọn <a href=\"/#dang-ky\">Đăng ký CTV đợt chuẩn bị</a> trên JoyCare.vn và điền đầy đủ thông tin.</p><p><strong>Bước 2 — Sàng lọc hồ sơ:</strong> JoyCare đối chiếu chuyên môn, khu vực và tính đầy đủ của hồ sơ.</p><p><strong>Bước 3 — Phỏng vấn:</strong> trao đổi trực tiếp về kinh nghiệm, tình huống thực tế và thái độ làm việc.</p><p><strong>Bước 4 — Chuẩn hóa:</strong> thống nhất tiêu chuẩn phục vụ, cách ghi chép và báo cáo trước khi nhận ca thử nghiệm.</p><h2>CTV đợt chuẩn bị được gì?</h2><ul><li>Được phỏng vấn và chuẩn hóa trước, ưu tiên liên hệ ca phù hợp khi JoyCare mở từng khu vực.</li><li>Được hướng dẫn tiêu chuẩn ghi chép, giao tiếp gia đình và an toàn tại nhà.</li><li>Thu nhập tính theo ca/giờ, minh bạch trước khi nhận — chi tiết trao đổi khi phỏng vấn.</li></ul><p>JoyCare đang hoàn thiện nên chưa phát sinh ca làm ngay. Gửi hồ sơ sớm giúp bạn vào danh sách ưu tiên thay vì chờ đến khi mở chính thức.</p>"
+  },
+  {
+    "title": "Chuẩn bị gì cho buổi đánh giá can thiệp sớm đầu tiên của con?",
+    "slug": "chuan-bi-buoi-danh-gia-can-thiep-som-dau-tien-cho-con",
+    "date": "2026-09-15T09:30:00+07:00",
+    "order": 13,
+    "author": "JoyCare.vn",
+    "focusKeyword": "chuẩn bị buổi đánh giá can thiệp sớm cho con",
+    "seoTitle": "Chuẩn bị buổi đánh giá can thiệp sớm đầu tiên cho con | JoyCare",
+    "seoDescription": "Checklist chuẩn bị buổi đánh giá can thiệp sớm đầu tiên: nhật ký 1-2 tuần, 2 video ngắn, hồ sơ sức khỏe và 4 nguyên tắc trong buổi.",
+    "excerpt": "Nhật ký 1-2 tuần, 2 video ngắn, hồ sơ sức khỏe và danh sách câu hỏi — 4 thứ giúp buổi đánh giá can thiệp sớm đầu tiên của con thu được thông tin đúng nhất.",
+    "tags": "can-thiep-som,danh-gia,tre-em,da-nang",
+    "coverImage": "/assets/blog/ho-tro-tre-rlptk.jpg",
+    "faqs": [
+      {
+        "question": "Có cần cho con nhịn ăn hay chuẩn bị gì đặc biệt?",
+        "answer": "Không. Cho con ăn ngủ đúng giờ như ngày thường, mang theo sữa, bỉm và món đồ chơi quen để con thoải mái nhất."
+      },
+      {
+        "question": "Đánh giá có kết luận con tự kỷ ngay không?",
+        "answer": "Thường không. Buổi đầu chỉ ghi nhận hiện trạng và đề xuất theo dõi hoặc đánh giá sâu thêm. Chẩn đoán cần nhiều buổi và nhiều nguồn thông tin."
+      },
+      {
+        "question": "Nên cho con đi đánh giá ở đâu?",
+        "answer": "Bệnh viện có khoa nhi hoặc phục hồi chức năng, hoặc trung tâm can thiệp sớm uy tín. Giữ lại bản tóm tắt để dùng khi trao đổi với bất kỳ đơn vị hỗ trợ nào sau đó."
+      }
+    ],
+    "content": "<p>Buổi <strong>đánh giá can thiệp sớm</strong> đầu tiên thường khiến cha mẹ vừa hy vọng vừa lo lắng: không biết con sẽ được hỏi gì, mình cần nói gì, và kết quả có “dán nhãn” cho con không. Bài viết này giúp gia đình chuẩn bị gọn trong một buổi tối, để buổi đánh giá thu được thông tin đúng nhất về con.</p><h2>Đánh giá can thiệp sớm là gì?</h2><p>Đây là buổi quan sát và trao đổi, không phải một ca khám bệnh hay một bài kiểm tra con phải “làm đúng”. Chuyên gia sẽ chơi cùng con, quan sát cách con giao tiếp, vận động, phản ứng với người lạ và đồ chơi mới, đồng thời hỏi cha mẹ về quá trình phát triển của con từ lúc sinh đến nay. Kết quả là một bức tranh về điểm mạnh và điểm cần hỗ trợ — không phải một cái nhãn dán lên con.</p><h2>Trước buổi đánh giá: chuẩn bị 4 thứ</h2><h3>1. Nhật ký 1-2 tuần</h3><p>Ghi ngắn mỗi ngày 3-5 dòng: con ăn ngủ thế nào, chơi gì lâu nhất, nói được từ nào mới, lúc nào con khó chịu và điều gì làm con dịu lại. Dữ liệu cụ thể có giá trị hơn nhiều so với cảm nhận chung chung kiểu “con chậm lắm”.</p><h3>2. Hai video ngắn</h3><p>Một video lúc con vui, hợp tác tốt và một video lúc khó khăn (không quay lại khi gọi tên, ăn vạ, chơi một mình). Mỗi video 1-2 phút, quay tự nhiên trong sinh hoạt hằng ngày, không dàn dựng, không nhắc con “làm lại cho cô xem”.</p><h3>3. Hồ sơ sức khỏe của con</h3><p>Sổ tiêm chủng, kết quả khám tai-mắt nếu có, các mốc đã đạt (lẫy, bò, đi, từ đầu tiên), tiền sử bệnh và thuốc đang dùng. Nếu con từng đi khám ở đâu, mang theo kết quả cũ để khỏi đánh giá lại từ đầu.</p><h3>4. Danh sách câu hỏi của cha mẹ</h3><p>Viết sẵn 3-5 câu hỏi quan trọng nhất, ví dụ: con có cần can thiệp không, mức độ ưu tiên là gì, ở nhà nên làm gì trước, bao lâu tái đánh giá. Buổi đánh giá trôi nhanh, không ghi trước rất dễ quên.</p><h2>Trong buổi đánh giá: 4 nguyên tắc</h2><ul><li>Trả lời thật, kể cả điều chưa tốt — giấu thông tin chỉ làm kế hoạch hỗ trợ sai lệch.</li><li>Để con chơi tự nhiên, đừng nhắc bài hay sửa con trước mặt chuyên gia.</li><li>Cha mẹ hoặc người chăm con chính nên cùng đi để thông tin đầy đủ.</li><li>Hỏi lại ngay khi chưa hiểu thuật ngữ — quyền của gia đình là ra về với một kế hoạch hiểu rõ.</li></ul><h2>Sau buổi đánh giá</h2><p>Xin bản tóm tắt bằng văn bản: điểm mạnh, điểm cần hỗ trợ, mục tiêu 3 tháng tới và lịch tái đánh giá. Về nhà, chọn 1-2 việc nhỏ nhất để bắt đầu ngay thay vì ôm cả kế hoạch lớn. Nếu gia đình ở Đà Nẵng và quan tâm hỗ trợ tại nhà, có thể <a href=\"/#dang-ky\">đăng ký nhận thông tin</a> để JoyCare gửi tài liệu và liên hệ khi triển khai phù hợp.</p><h2>Khi nào nên đưa con đi đánh giá?</h2><p>Khi có từ hai <a href=\"/blog/tre-tu-ky-nhe-7-dau-hieu-som-cha-me-de-bo-qua/\">dấu hiệu tự kỷ nhẹ</a> kéo dài, con chậm nói rõ so với mốc tuổi (xem <a href=\"/blog/tre-cham-noi-dau-hieu-va-cach-dong-hanh-tai-nha/\">dấu hiệu chậm nói và cách đồng hành</a>), con thoái lui kỹ năng đã có, hoặc đơn giản là cha mẹ lo lắng kéo dài. Lo lắng của cha mẹ đã là một lý do đủ chính đáng — đánh giá sớm không bao giờ là thừa. Bài viết chỉ mang tính tham khảo, không thay thế chẩn đoán của bác sĩ hoặc chuyên gia phát triển trẻ em.</p>"
   }
 ]
