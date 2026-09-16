@@ -1477,7 +1477,7 @@ function renderBlogSection(page){
       `<span class="tag-pill clickable" onclick='event.preventDefault(); event.stopPropagation(); filterBlogByTag(${JSON.stringify(t.trim())})'>#${escapeHtml(t.trim())}</span>`).join('');
     return `
     <a class="card p-6 flex flex-col" href="/blog/${encodeURIComponent(p.slug)}/" aria-label="Đọc bài: ${escapeHtml(p.title)}">
-      ${p.coverImage ? `<img src="${escapeHtml(p.coverImage)}" alt="${escapeHtml(p.title)}" class="w-full h-36 object-cover rounded-xl mb-4">` : ''}
+      ${blogCoverPicture(p.coverImage, p.title, 'w-full h-36 object-cover rounded-xl mb-4')}
       <p class="font-mono text-xs text-teal-mid mb-3">${new Date(p.date).toLocaleDateString(currentLang==='vi'?'vi-VN':'en-US')}</p>
       <h3 class="font-semibold text-teal-deep mb-2">${escapeHtml(p.title)}</h3>
       <p class="text-sm text-teal-mid mb-4 flex-1">${escapeHtml(p.excerpt || stripHtml(p.content).slice(0,140))}${(p.excerpt||stripHtml(p.content)).length>=140?'...':''}</p>
