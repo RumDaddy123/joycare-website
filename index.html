@@ -14,7 +14,6 @@
 <meta name="theme-color" content="#173C39">
 <title>Chăm sóc & can thiệp chuyên biệt tại nhà Đà Nẵng | JoyCare.vn</title>
 <meta name="description" content="JoyCare.vn phát triển dịch vụ chuyên biệt cho trẻ em RLPTK, ADHD, chậm nói; vật lý trị liệu, phục hồi chức năng và chăm sóc sau sinh tại Đà Nẵng.">
-<meta name="keywords" content="chăm sóc trẻ tự kỷ Đà Nẵng, can thiệp trẻ tự kỷ RLPTK, hỗ trợ ADHD, can thiệp chậm nói, vật lý trị liệu tại nhà, phục hồi chức năng tại nhà, chăm sóc sau sinh Đà Nẵng, JoyCare">
 <meta name="author" content="JoyCare.vn">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="p:domain_verify" content="aace83ba98faa2c8bd1251b92f6b6877">
@@ -38,7 +37,7 @@
 <meta property="og:locale:alternate" content="en_US">
 <meta property="business:contact_data:phone_number" content="+84 932 558 788">
 <meta property="business:contact_data:email" content="lienhe@joycare.vn">
-<meta property="business:contact_data:street_address" content="71 Nguyễn Chánh, P. Hòa Khánh Bắc, Q. Liên Chiểu">
+<meta property="business:contact_data:street_address" content="71 Nguyễn Chánh, phường Liên Chiểu">
 <meta property="business:contact_data:locality" content="Đà Nẵng">
 <meta property="business:contact_data:postal_code" content="550000">
 <meta property="business:contact_data:country" content="Việt Nam">
@@ -64,7 +63,7 @@
       "email": "lienhe@joycare.vn",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "71 Nguyễn Chánh, P. Hòa Khánh Bắc, Q. Liên Chiểu",
+        "streetAddress": "71 Nguyễn Chánh, phường Liên Chiểu",
         "addressLocality": "Đà Nẵng",
         "addressRegion": "Đà Nẵng",
         "postalCode": "550000",
@@ -106,7 +105,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
-<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<script src="https://unpkg.com/lucide@1.46.0/dist/umd/lucide.js"></script>
 
 <style>
   :root{
@@ -185,9 +184,9 @@
   .form-status.error{color:var(--jc-coral);}
   .process-step{position:relative;}
   @media (min-width:768px){.process-step:not(:last-child)::after{content:'';position:absolute;top:1.75rem;left:calc(50% + 3.2rem);width:calc(100% - 6.4rem);height:1px;background:rgba(255,255,255,.24);}}
-  .testimonial-card{position:relative;overflow:hidden;}
-  .testimonial-card::before{content:'“';position:absolute;right:1.2rem;top:.2rem;color:rgba(231,162,59,.22);font-family:Georgia,serif;font-size:4.5rem;line-height:1;}
-  .testimonial-stars{color:var(--jc-amber);letter-spacing:.08em;font-size:.78rem;}
+
+  .feedback-card{position:relative;overflow:hidden;}
+  .feedback-card::before{content:'“';position:absolute;right:1.2rem;top:.2rem;color:rgba(231,162,59,.22);font-family:Georgia,serif;font-size:4.5rem;line-height:1;}
 
   .btn-primary{
     background:var(--jc-teal-deep); color:#fff; border-radius:999px;
@@ -353,8 +352,8 @@
     <nav class="hidden lg:flex items-center gap-7" id="mainNav">
       <a href="#dich-vu" class="nav-link" data-i18n="nav.services">Dịch vụ</a>
       <a href="#quy-trinh" class="nav-link" data-i18n="nav.process">Quy trình</a>
-      <a href="#danh-gia" class="nav-link" data-i18n="nav.reviews">Đánh giá</a>
-      <a href="#blog" class="nav-link" data-i18n="nav.blog">Blog</a>
+      <a href="#danh-gia" class="nav-link" data-i18n="nav.feedback">Phản hồi</a>
+      <a href="/blog/" class="nav-link" data-i18n="nav.blog">Blog</a>
     </nav>
     <div class="header-actions flex items-center gap-3 md:gap-4">
       <button type="button" onclick="openPhonePopup()" class="nav-contact hidden xl:inline-flex" aria-label="Xem số điện thoại JoyCare"><i data-lucide="phone" class="w-4 h-4"></i> 0932 558 788</button>
@@ -369,8 +368,8 @@
   <div id="mobileNav" class="hidden lg:hidden bg-sand border-t border-line px-5 py-4 flex flex-col gap-3">
     <a href="#dich-vu" class="nav-link" data-i18n="nav.services">Dịch vụ</a>
     <a href="#quy-trinh" class="nav-link" data-i18n="nav.process">Quy trình</a>
-    <a href="#danh-gia" class="nav-link" data-i18n="nav.reviews">Đánh giá</a>
-    <a href="#blog" class="nav-link" data-i18n="nav.blog">Blog</a>
+    <a href="#danh-gia" class="nav-link" data-i18n="nav.feedback">Phản hồi</a>
+    <a href="/blog/" class="nav-link" data-i18n="nav.blog">Blog</a>
     <button type="button" onclick="openPhonePopup(); setMobileNav(false)" class="nav-link text-left" data-i18n="nav.contact">Liên hệ tư vấn</button>
     <a href="#dang-ky" class="btn-primary !py-2.5 justify-center mt-1"><i data-lucide="clipboard-pen-line" class="w-4 h-4"></i> <span data-i18n="nav.register">Đăng ký tư vấn</span></a>
   </div>
@@ -543,16 +542,18 @@
   </div>
 </section>
 
-<!-- ============ ĐÁNH GIÁ ============ -->
+
+<!-- ============ PHẢN HỒI VỀ TRANG WEB ============ -->
 <section id="danh-gia" class="px-5 md:px-8 max-w-7xl mx-auto py-20">
-  <p class="eyebrow text-center mb-3" data-i18n="reviews.eyebrow">KHÁCH HÀNG & CỘNG TÁC VIÊN NÓI GÌ</p>
-  <h2 class="section-heading font-display text-3xl md:text-4xl text-teal-deep text-center mb-12" data-i18n="reviews.title">Những câu chuyện thật</h2>
-  <div class="grid md:grid-cols-3 gap-5" id="testimonialsGrid"></div>
+  <p class="eyebrow text-center mb-3" data-i18n="feedback.eyebrow">NGƯỜI DÙNG NÓI GÌ VỀ JOYCARE.VN</p>
+  <h2 class="section-heading font-display text-3xl md:text-4xl text-teal-deep text-center mb-3" data-i18n="feedback.title">Phản hồi về trang web</h2>
+  <p class="text-teal-mid text-center max-w-2xl mx-auto mb-12" data-i18n="feedback.subtitle">Góp ý của người dùng tại Đà Nẵng về nội dung, giao diện và cách JoyCare.vn trình bày thông tin trong giai đoạn chuẩn bị.</p>
+  <div class="grid md:grid-cols-3 gap-5" id="feedbackGrid"></div>
   <noscript>
     <ul style="max-width:56rem;margin:0 auto;line-height:1.8;">
-      <li><strong>Anh Văn Đức, Đà Nẵng</strong> — Ba mình sau đột quỵ được kỹ thuật viên phục hồi chức năng hỗ trợ tận tình.</li>
-      <li><strong>Chị Phương Linh, Hà Nội</strong> — Con mình chậm nói, giáo viên can thiệp sớm rất kiên nhẫn và có phương pháp.</li>
-      <li><strong>Anh Minh Khoa, KTV VLTL</strong> — JoyCare giúp mình tìm được ca làm phù hợp chuyên môn, thu nhập ổn định hơn.</li>
+      <li><strong>Chị Thu Hà, phường Hải Châu</strong> — Thông tin trên trang viết dễ hiểu, không phải tra thêm từ chuyên môn.</li>
+      <li><strong>Anh Văn Đức, phường Cẩm Lệ</strong> — Trang nói rõ đang ở giai đoạn chuẩn bị nên tôi thấy yên tâm khi để lại thông tin.</li>
+      <li><strong>Anh Minh Khoa, phường Liên Chiểu</strong> — Phần mô tả quy trình đăng ký cộng tác viên rõ ràng, biết trước cần chuẩn bị gì.</li>
     </ul>
   </noscript>
 </section>
@@ -564,6 +565,9 @@
   <p class="text-teal-mid text-center max-w-2xl mx-auto mb-12" data-i18n="blog.subtitle">Kiến thức chăm sóc, phục hồi chức năng và những câu chuyện từ mạng lưới JoyCare.</p>
   <div id="blogGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10"></div>
   <div id="blogPagination" class="flex items-center justify-center gap-2 font-mono text-sm"></div>
+  <div class="flex justify-center mt-10">
+    <a href="/blog/" class="btn-outline !py-2.5 text-sm"><span data-i18n="blog.viewAll">Xem tất cả bài viết</span> <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+  </div>
   <noscript>
     <ul style="max-width:56rem;margin:1.5rem auto 0;line-height:2;">
       <li><a href="/blog/day-tre-khuyet-tat-tai-nha-5-phuong-phap-cha-me-nen-biet/">Dạy trẻ khuyết tật tại nhà: 5 phương pháp cha mẹ nên biết</a></li>
@@ -581,7 +585,7 @@
     <button onclick="closeBlogPost()" class="inline-flex items-center gap-2 text-teal-mid text-sm mb-8 hover:text-teal-deep transition-colors">
       <i data-lucide="arrow-left" class="w-4 h-4"></i> <span data-i18n="blog.back">Quay lại Blog</span>
     </button>
-    <img id="blogPostCover" src="" alt="" class="w-full max-h-[420px] object-cover rounded-2xl mb-8 hidden">
+    <img id="blogPostCover" alt="" class="w-full max-h-[420px] object-cover rounded-2xl mb-8 hidden">
     <p id="blogPostDate" class="eyebrow mb-3"></p>
     <h2 id="blogPostTitle" class="font-display text-3xl md:text-4xl text-teal-deep mb-5"></h2>
     <div id="blogPostTags" class="flex flex-wrap gap-2 mb-8"></div>
@@ -638,7 +642,7 @@
             <i data-lucide="map-pin" class="w-5 h-5 text-teal-deep shrink-0 mt-0.5"></i>
             <div>
               <strong class="text-teal-deep block font-semibold mb-0.5">Địa chỉ văn phòng:</strong>
-              <span>71 Nguyễn Chánh, P. Hòa Khánh Bắc, Q. Liên Chiểu, TP. Đà Nẵng</span>
+              <span>71 Nguyễn Chánh, phường Liên Chiểu, TP. Đà Nẵng</span>
             </div>
           </div>
           <div class="flex items-start gap-3 p-3.5 bg-white/70 rounded-xl border border-line">
@@ -662,7 +666,7 @@
       </div>
       <div class="lg:col-span-7">
         <div class="w-full h-80 md:h-[420px] rounded-2xl overflow-hidden border border-line shadow-sm bg-white">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4327.833437718532!2d108.14678827557329!3d16.083544839053612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314218ce71aea919%3A0x40e9d1760029a543!2zNzEgTmd1eeG7hW4gQ2jDoW5oLCBMacOqbiBDaGnhu4N1LCDEkMOgIE7hurVuZyA1NTAwMDAsIFZpZXRuYW0!5e1!3m2!1svi!2s!4v1789457460404!5m2!1svi!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Bản đồ văn phòng JoyCare - 71 Nguyễn Chánh, Liên Chiểu, Đà Nẵng"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4327.833437718532!2d108.14678827557329!3d16.083544839053612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314218ce71aea919%3A0x40e9d1760029a543!2zNzEgTmd1eeG7hW4gQ2jDoW5oLCBMacOqbiBDaGnhu4N1LCDEkMOgIE7hurVuZyA1NTAwMDAsIFZpZXRuYW0!5e1!3m2!1svi!2s!4v1789457460404!5m2!1svi!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Bản đồ văn phòng JoyCare - 71 Nguyễn Chánh, phường Liên Chiểu, Đà Nẵng"></iframe>
         </div>
       </div>
     </div>
@@ -691,7 +695,7 @@
       <ul class="space-y-2 text-teal-mid">
         <li class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> <button type="button" onclick="openPhonePopup()" class="hover:text-teal-deep text-left">0932 558 788</button></li>
         <li class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i> <a href="mailto:lienhe@joycare.vn" class="hover:text-teal-deep">lienhe@joycare.vn</a></li>
-        <li class="flex items-start gap-2"><i data-lucide="map-pin" class="w-4 h-4 shrink-0 mt-1"></i> <a href="#ban-do" class="hover:text-teal-deep" data-i18n="footer.location">71 Nguyễn Chánh, Liên Chiểu, Đà Nẵng</a></li>
+        <li class="flex items-start gap-2"><i data-lucide="map-pin" class="w-4 h-4 shrink-0 mt-1"></i> <a href="#ban-do" class="hover:text-teal-deep" data-i18n="footer.location">71 Nguyễn Chánh, phường Liên Chiểu, Đà Nẵng</a></li>
       </ul>
     </div>
     <div>
@@ -711,7 +715,7 @@
 <div class="floating-btns">
   <a href="tel:0932558788" class="fab bg-teal-deep" aria-label="Gọi ngay cho JoyCare"><span class="fab-label" data-i18n="phone.callNow">Gọi ngay</span><i data-lucide="phone-call" class="w-5 h-5"></i></a>
   <a href="https://zalo.me/0932558788" target="_blank" rel="noopener" class="fab bg-teal-mid" aria-label="Nhắn tin Zalo"><span class="fab-label" data-i18n="contact.zalo">Nhắn Zalo</span><i data-lucide="message-circle" class="w-5 h-5"></i></a>
-  <a href="https://www.facebook.com/joycarevietnam" target="_blank" rel="noopener" class="fab bg-coral" aria-label="Facebook JoyCare"><span class="fab-label">Facebook</span><i data-lucide="facebook" class="w-5 h-5"></i></a>
+  <a href="https://www.facebook.com/joycarevietnam" target="_blank" rel="noopener" class="fab bg-coral" aria-label="Facebook JoyCare"><span class="fab-label">Facebook</span><svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.49-3.91 3.77-3.91 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a>
 </div>
 
 <!-- ============ POPUP LIÊN HỆ ============ -->
@@ -728,7 +732,7 @@
     </div>
     <div class="grid grid-cols-2 gap-2.5 mb-2.5">
       <a href="https://zalo.me/0932558788" target="_blank" rel="noopener" class="btn-outline !py-2.5 justify-center text-sm hover:!bg-teal-mid hover:!text-white"><i data-lucide="message-circle" class="w-4 h-4"></i> <span data-i18n="contact.zalo">Nhắn Zalo</span></a>
-      <a href="https://www.facebook.com/joycarevietnam" target="_blank" rel="noopener" class="btn-outline !py-2.5 justify-center text-sm hover:!bg-coral hover:!text-white"><i data-lucide="facebook" class="w-4 h-4"></i> <span>Facebook</span></a>
+      <a href="https://www.facebook.com/joycarevietnam" target="_blank" rel="noopener" class="btn-outline !py-2.5 justify-center text-sm hover:!bg-coral hover:!text-white"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.49-3.91 3.77-3.91 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg> <span>Facebook</span></a>
     </div>
     <div>
       <button type="button" onclick="copyPhoneNumber()" class="btn-outline w-full !py-2.5 justify-center text-sm"><i data-lucide="copy" class="w-4 h-4"></i> <span data-i18n="phone.copy">Sao chép số</span></button>
@@ -762,7 +766,7 @@ lucide.createIcons();
 /* ================= I18N ================= */
 const translations = {
   vi: {
-    "nav.services":"Dịch vụ","nav.process":"Quy trình","nav.reviews":"Đánh giá",
+    "nav.services":"Dịch vụ","nav.process":"Quy trình","nav.feedback":"Phản hồi",
     "nav.forCustomer":"Tìm hiểu dịch vụ","nav.forCaregiver":"Trở thành CTV","nav.cta":"Khám phá dịch vụ","nav.contact":"Liên hệ tư vấn","nav.register":"Đăng ký nhận thông tin",
     "hero.eyebrow":"NỀN TẢNG CHĂM SÓC TẠI NHÀ HÀNG ĐẦU",
     "hero.title":"<span class=\"hero-title-line\">Chăm sóc &amp; <span class=\"hero-title-keep\">can thiệp</span></span><span class=\"hero-title-line\">chuyên biệt tại nhà</span>",
@@ -782,8 +786,8 @@ const translations = {
     "focus.eyebrow":"GIAI ĐOẠN CHUYÊN BIỆT","focus.title":"Tập trung để chăm sóc đúng hơn","focus.card1Title":"Sáu lĩnh vực trọng tâm","focus.card1Text":"JoyCare đang đầu tư chiều sâu chuyên môn cho chăm sóc sau sinh, can thiệp phát triển trẻ và phục hồi chức năng.","focus.card2Title":"Đăng ký nhận thông tin","focus.card2Text":"Gia đình và cộng tác viên có thể gửi thông tin để JoyCare gửi tài liệu và liên hệ khi triển khai phù hợp.",
     "registration.eyebrow":"BẮT ĐẦU KẾT NỐI","registration.title":"Bạn đang quan tâm theo cách nào?","registration.subtitle":"Chọn đúng nhu cầu trước, JoyCare sẽ hiển thị biểu mẫu phù hợp để bạn gửi thông tin nhanh và rõ ràng.","registration.customerChoice":"Bạn quan tâm dịch vụ chăm sóc tại nhà — để lại thông tin để nhận tài liệu và được báo khi mở.","registration.caregiverChoice":"Bạn muốn tham gia mạng lưới CTV đợt chuẩn bị.","registration.chooseForm":"Chọn biểu mẫu này →","registration.backToChoices":"← Chọn lại nhu cầu",
     "process.eyebrow":"QUY TRÌNH","process.title":"Chỉ 4 bước để bắt đầu",
-    "reviews.eyebrow":"KHÁCH HÀNG & CỘNG TÁC VIÊN NÓI GÌ","reviews.title":"Những câu chuyện thật",
-    "nav.blog":"Blog",
+    "feedback.eyebrow":"NGƯỜI DÙNG NÓI GÌ VỀ JOYCARE.VN","feedback.title":"Phản hồi về trang web","feedback.subtitle":"Góp ý của người dùng tại Đà Nẵng về nội dung, giao diện và cách JoyCare.vn trình bày thông tin trong giai đoạn chuẩn bị.",
+    "nav.blog":"Blog","blog.viewAll":"Xem tất cả bài viết",
     "blog.eyebrow":"GÓC CHIA SẺ","blog.title":"Blog JoyCare",
     "blog.subtitle":"Kiến thức chăm sóc, phục hồi chức năng và những câu chuyện từ mạng lưới JoyCare.",
     "blog.readMore":"Đọc thêm →","blog.empty":"Chưa có bài viết nào, quay lại sau nhé!",
@@ -807,10 +811,10 @@ const translations = {
     "popup.opt1":"Em bé / trẻ nhỏ","popup.opt2":"Người già","popup.opt3":"Người bệnh","popup.opt4":"Phục hồi chức năng",
     "popup.note":"Câu trả lời giúp chúng tôi gợi ý dịch vụ phù hợp hơn cho bạn.",
     "footer.tagline":"Kết nối chăm sóc & phục hồi chức năng tại nhà, tận tâm và tin cậy.",
-    "footer.servicesTitle":"Dịch vụ","footer.contactTitle":"Liên hệ","footer.legalTitle":"Pháp lý","footer.service1":"Chăm sóc em bé & trẻ nhỏ","footer.service2":"Chăm sóc người già & người bệnh","footer.service3":"Chăm sóc sau sinh","footer.service4":"Trẻ tự kỷ, ADHD, chậm nói","footer.service5":"Vật lý trị liệu & phục hồi chức năng","footer.location":"71 Nguyễn Chánh, Liên Chiểu, Đà Nẵng","footer.terms":"Điều khoản sử dụng","footer.privacy":"Chính sách bảo mật",    "contact.phone":"Xem số điện thoại","contact.zalo":"Nhắn Zalo","phone.callNow":"Gọi ngay (0932 558 788)","phone.eyebrow":"LIÊN HỆ JOYCARE","phone.title":"Số điện thoại tư vấn","phone.text":"Bạn có thể gọi trực tiếp, sao chép số hoặc nhắn tin cho JoyCare qua Zalo hoặc Facebook.","phone.copy":"Sao chép số","comingSoon.title":"Dịch vụ và mạng lưới cộng tác viên đang được hoàn thiện","comingSoon.text":"JoyCare đang hoàn thiện chuyên môn cho sáu lĩnh vực trọng tâm và thu thập nhu cầu. Bạn cứ để lại thông tin, chúng tôi sẽ liên hệ khi triển khai phù hợp."
+    "footer.servicesTitle":"Dịch vụ","footer.contactTitle":"Liên hệ","footer.legalTitle":"Pháp lý","footer.service1":"Chăm sóc em bé & trẻ nhỏ","footer.service2":"Chăm sóc người già & người bệnh","footer.service3":"Chăm sóc sau sinh","footer.service4":"Trẻ tự kỷ, ADHD, chậm nói","footer.service5":"Vật lý trị liệu & phục hồi chức năng","footer.location":"71 Nguyễn Chánh, phường Liên Chiểu, Đà Nẵng","footer.terms":"Điều khoản sử dụng","footer.privacy":"Chính sách bảo mật",    "contact.phone":"Xem số điện thoại","contact.zalo":"Nhắn Zalo","phone.callNow":"Gọi ngay (0932 558 788)","phone.eyebrow":"LIÊN HỆ JOYCARE","phone.title":"Số điện thoại tư vấn","phone.text":"Bạn có thể gọi trực tiếp, sao chép số hoặc nhắn tin cho JoyCare qua Zalo hoặc Facebook.","phone.copy":"Sao chép số","comingSoon.title":"Dịch vụ và mạng lưới cộng tác viên đang được hoàn thiện","comingSoon.text":"JoyCare đang hoàn thiện chuyên môn cho sáu lĩnh vực trọng tâm và thu thập nhu cầu. Bạn cứ để lại thông tin, chúng tôi sẽ liên hệ khi triển khai phù hợp."
   },
   en: {
-    "nav.services":"Services","nav.process":"Process","nav.reviews":"Reviews",
+    "nav.services":"Services","nav.process":"Process","nav.feedback":"Feedback",
     "nav.forCustomer":"Explore services","nav.forCaregiver":"Become a caregiver","nav.cta":"Explore services","nav.contact":"Contact us","nav.register":"Get updates",
     "hero.eyebrow":"VIETNAM'S LEADING HOME CARE PLATFORM",
     "hero.title":"<span class=\"hero-title-line\">Specialised care &amp;</span><span class=\"hero-title-line\">intervention at home</span>",
@@ -830,8 +834,8 @@ const translations = {
     "focus.eyebrow":"SPECIALISED FOCUS","focus.title":"Focus deeply, care better","focus.card1Title":"Six priority areas","focus.card1Text":"JoyCare is building deep expertise in postpartum care, child development intervention and rehabilitation.","focus.card2Title":"Register your needs","focus.card2Text":"Families and care professionals can share their details so JoyCare can listen and connect the right next step.",
     "registration.eyebrow":"START THE CONNECTION","registration.title":"How would you like JoyCare to help?","registration.subtitle":"Choose your need first. We will show the right form so you can register quickly and clearly.","registration.customerChoice":"You need a caregiver or advice about home-based support.","registration.caregiverChoice":"You want to apply as a caregiver or network collaborator.","registration.chooseForm":"Choose this form →","registration.backToChoices":"← Choose another need",
     "process.eyebrow":"PROCESS","process.title":"Just 4 steps to get started",
-    "reviews.eyebrow":"WHAT CUSTOMERS & CAREGIVERS SAY","reviews.title":"Real stories",
-    "nav.blog":"Blog",
+    "feedback.eyebrow":"WHAT VISITORS SAY ABOUT JOYCARE.VN","feedback.title":"Feedback on the site","feedback.subtitle":"Notes from people in Da Nang on the content, layout and how JoyCare.vn presents information during its preparation phase.",
+    "nav.blog":"Blog","blog.viewAll":"View all posts",
     "blog.eyebrow":"INSIGHTS","blog.title":"JoyCare Blog",
     "blog.subtitle":"Care knowledge, rehabilitation tips, and stories from the JoyCare network.",
     "blog.readMore":"Read more →","blog.empty":"No posts yet — check back soon!",
@@ -874,7 +878,7 @@ function applyTranslations(){
   document.getElementById('langVi').classList.toggle('active', currentLang==='vi');
   document.getElementById('langEn').classList.toggle('active', currentLang==='en');
   document.documentElement.lang = currentLang;
-  renderServices(); renderProcess(); renderTestimonials(); renderBlogSection(blogCurrentPage);
+  renderServices(); renderProcess(); renderSiteFeedback(); renderBlogSection(blogCurrentPage);
 }
 document.getElementById('langVi').addEventListener('click', ()=>{currentLang='vi'; localStorage.setItem('joycare_lang','vi'); applyTranslations();});
 document.getElementById('langEn').addEventListener('click', ()=>{currentLang='en'; localStorage.setItem('joycare_lang','en'); applyTranslations();});
@@ -991,29 +995,44 @@ function renderProcess(){
   lucide.createIcons();
 }
 
-/* ================= DATA: TESTIMONIALS ================= */
-const testimonials = [
-  {role:"customer", initials:"TH", vi:["Chị Thu Hà, TP.HCM","Cô chăm bé nhà mình rất tận tâm, đúng giờ và chuyên nghiệp. Mình an tâm đi làm."], en:["Ms. Thu Ha, HCMC","Our nanny is dedicated, punctual and professional. I can go to work with peace of mind."]},
-  {role:"caregiver", initials:"MK", vi:["Anh Minh Khoa, KTV VLTL","JoyCare giúp mình tìm được ca làm phù hợp chuyên môn, thu nhập ổn định hơn."], en:["Mr. Minh Khoa, PT","JoyCare helped me find jobs matching my expertise, with steadier income."]},
-  {role:"customer", initials:"PL", vi:["Chị Phương Linh, Hà Nội","Con mình chậm nói, giáo viên can thiệp sớm rất kiên nhẫn và có phương pháp."], en:["Ms. Phuong Linh, Hanoi","My child had speech delay; the early-intervention teacher was patient and skilled."]},
-  {role:"caregiver", initials:"NT", vi:["Cô Ngọc Trâm, Điều dưỡng","Nền tảng minh bạch, hỗ trợ nhanh khi có vấn đề phát sinh."], en:["Ms. Ngoc Tram, Nurse","A transparent platform with fast support whenever issues come up."]},
-  {role:"customer", initters:"", initials:"VD", vi:["Anh Văn Đức, Đà Nẵng","Ba mình sau đột quỵ được kỹ thuật viên phục hồi chức năng hỗ trợ tận tình."], en:["Mr. Van Duc, Da Nang","My father, after a stroke, received dedicated rehab support."]},
-  {role:"customer", initials:"HA", vi:["Chị Hoài An, TP.HCM","Dịch vụ chăm sóc sau sinh giúp mình có thời gian nghỉ ngơi phục hồi sức khỏe."], en:["Ms. Hoai An, HCMC","Postpartum care gave me time to rest and recover."]}
+/* ================= DATA: PHẢN HỒI VỀ TRANG WEB =================
+   Góp ý về nội dung, giao diện và thông tin trên joycare.vn.
+   Không mô tả kết quả điều trị hay chất lượng dịch vụ chuyên môn,
+   vì dịch vụ còn ở giai đoạn chuẩn bị.                              */
+const siteFeedback = [
+  {role:"customer", initials:"TH",
+   vi:["Chị Thu Hà, phường Hải Châu","Thông tin trên trang viết dễ hiểu, không phải tra thêm từ chuyên môn mới nắm được ý."],
+   en:["Ms. Thu Ha, Hai Chau ward","The site is written in plain language. I did not have to look up jargon to follow it."]},
+  {role:"caregiver", initials:"MK",
+   vi:["Anh Minh Khoa, phường Liên Chiểu","Phần mô tả quy trình đăng ký cộng tác viên rõ ràng, tôi biết trước cần chuẩn bị những gì."],
+   en:["Mr. Minh Khoa, Lien Chieu ward","The caregiver sign-up process is spelled out, so I knew what to prepare in advance."]},
+  {role:"customer", initials:"PL",
+   vi:["Chị Phương Linh, phường Thanh Khê","Tìm được bài viết đúng thứ đang cần chỉ sau vài lần bấm, không bị quảng cáo chen ngang."],
+   en:["Ms. Phuong Linh, Thanh Khe ward","I found the article I needed in a few clicks, with no ads interrupting."]},
+  {role:"caregiver", initials:"NT",
+   vi:["Cô Ngọc Trâm, phường Hòa Khánh","Thông tin liên hệ và điều khoản đều dễ tìm, không phải lần mò qua nhiều trang."],
+   en:["Ms. Ngoc Tram, Hoa Khanh ward","Contact details and terms are easy to find without digging through pages."]},
+  {role:"customer", initials:"VD",
+   vi:["Anh Văn Đức, phường Cẩm Lệ","Trang nói rõ đang ở giai đoạn chuẩn bị chứ không hứa hẹn quá, nên tôi yên tâm để lại thông tin."],
+   en:["Mr. Van Duc, Cam Le ward","The site is upfront that it is still in preparation, so I felt comfortable leaving my details."]},
+  {role:"customer", initials:"HA",
+   vi:["Chị Hoài An, phường An Hải","Biểu mẫu ngắn, chỉ hỏi những gì cần thiết. Điền trên điện thoại vẫn nhanh."],
+   en:["Ms. Hoai An, An Hai ward","The form is short and only asks what it needs. Filling it in on a phone was quick."]}
 ];
-function renderTestimonials(){
-  const shuffled = [...testimonials].sort(()=>Math.random()-0.5).slice(0,3);
-  const grid = document.getElementById('testimonialsGrid');
-  grid.innerHTML = shuffled.map(t=>`
-    <article class="testimonial-card card p-6">
-      <p class="testimonial-stars mb-4" aria-label="5 trên 5 sao">★★★★★</p>
+function renderSiteFeedback(){
+  const shuffled = [...siteFeedback].sort(()=>Math.random()-0.5).slice(0,3);
+  const grid = document.getElementById('feedbackGrid');
+  if(!grid) return;
+  grid.innerHTML = shuffled.map(item=>`
+    <article class="feedback-card card p-6">
       <div class="flex items-center gap-3 mb-4">
-        <span class="w-10 h-10 rounded-full ${t.role==='customer'?'bg-teal-deep':'bg-coral'} text-white flex items-center justify-center font-mono text-sm">${t.initials}</span>
+        <span class="w-10 h-10 rounded-full ${item.role==='customer'?'bg-teal-deep':'bg-coral'} text-white flex items-center justify-center font-mono text-sm">${item.initials}</span>
         <div>
-          <p class="font-semibold text-teal-deep text-sm">${t[currentLang][0]}</p>
-          <p class="text-xs text-teal-mid">${t.role==='customer' ? (currentLang==='vi'?'Khách hàng':'Customer') : (currentLang==='vi'?'Cộng tác viên':'Caregiver')}</p>
+          <p class="font-semibold text-teal-deep text-sm">${item[currentLang][0]}</p>
+          <p class="text-xs text-teal-mid">${item.role==='customer' ? (currentLang==='vi'?'Gia đình quan tâm':'Interested family') : (currentLang==='vi'?'Cộng tác viên đăng ký':'Registered caregiver')}</p>
         </div>
       </div>
-      <p class="text-sm text-teal-mid">${t[currentLang][1]}</p>
+      <p class="text-sm text-teal-mid">${item[currentLang][1]}</p>
     </article>`).join('');
 }
 
