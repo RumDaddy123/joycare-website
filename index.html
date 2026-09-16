@@ -1434,6 +1434,14 @@ function blogSortComparator(a,b){
 }
 
 /* ---- Hiển thị blog trên trang chủ: tối đa 5 bài/trang + phân trang + lọc theo hashtag ---- */
+/* ---- Ảnh bìa blog: ưu tiên WebP, giữ JPEG dự phòng ---- */
+function blogCoverPicture(src, alt, cls){
+  if(!src) return '';
+  const webp = src.replace(/\.(jpe?g|png)$/i, '.webp');
+  const source = webp === src ? '' : `<source srcset="${escapeHtml(webp)}" type="image/webp">`;
+  return `<picture>${source}<img src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" class="${cls}" width="1200" height="675" loading="lazy" decoding="async"></picture>`;
+}
+
 let blogTagFilter = null;
 function filterBlogByTag(tag){
   blogTagFilter = tag;
