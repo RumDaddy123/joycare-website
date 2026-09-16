@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+# File du lieu noi bo cua buoc build, khong can lap chi muc
+Disallow: /blog/posts.json
+Disallow: /blog/.generated-pages.json
+
 Sitemap: https://joycare.vn/sitemap.xml

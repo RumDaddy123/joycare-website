@@ -48,17 +48,24 @@
 <meta name="twitter:description" content="Hỗ trợ trẻ em RLPTK, ADHD, chậm nói; vật lý trị liệu, phục hồi chức năng và chăm sóc sau sinh.">
 <meta name="twitter:image" content="https://joycare.vn/og-image.jpg">
 
-<!-- JSON-LD: tổ chức, website và các dịch vụ trọng tâm -->
+<!-- JSON-LD: doanh nghiệp địa phương, website và danh mục dịch vụ.
+     LocalBusiness thay cho Organization để có cơ hội vào kết quả tìm kiếm
+     địa phương. Mỗi dịch vụ trỏ tới trang đích riêng dưới /dich-vu/.
+     CÒN THIẾU: openingHoursSpecification và priceRange. Bổ sung khi JoyCare
+     chốt khung giờ tư vấn và khoảng giá, đừng điền số phỏng đoán. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": "LocalBusiness",
       "@id": "https://joycare.vn/#organization",
       "name": "JoyCare.vn",
+      "alternateName": "JoyCare",
+      "description": "Dịch vụ chăm sóc và can thiệp chuyên biệt tại nhà ở Đà Nẵng: hỗ trợ trẻ rối loạn phổ tự kỷ, ADHD, chậm nói, chăm sóc sau sinh, vật lý trị liệu và phục hồi chức năng.",
       "url": "https://joycare.vn/",
       "logo": "https://joycare.vn/assets/joycare-logo-badge.svg",
+      "image": "https://joycare.vn/og-image.jpg",
       "telephone": "+84-932-558-788",
       "email": "lienhe@joycare.vn",
       "address": {
@@ -75,7 +82,73 @@
         "longitude": 108.146788
       },
       "hasMap": "https://www.google.com/maps/search/?api=1&query=71+Nguy%E1%BB%85n+Ch%C3%A1nh+Li%C3%AAn+Chi%E1%BB%83u+%C4%90%C3%A0+N%E1%BA%B5ng",
-      "sameAs": ["https://www.facebook.com/joycarevietnam","https://zalo.me/0932558788","https://www.tiktok.com/@joycare.vn","https://www.youtube.com/@joycare_vn","https://x.com/joycare_vn","https://www.instagram.com/joycare.vn/","https://www.pinterest.com/Joycare_vn/"]
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Đà Nẵng"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Phường Hải Châu, Đà Nẵng"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Phường Thanh Khê, Đà Nẵng"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Phường An Hải, Đà Nẵng"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Phường Sơn Trà, Đà Nẵng"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Phường Ngũ Hành Sơn, Đà Nẵng"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Phường Cẩm Lệ, Đà Nẵng"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Phường Hòa Cường, Đà Nẵng"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Phường Hòa Xuân, Đà Nẵng"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Phường Hòa Khánh, Đà Nẵng"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Phường Liên Chiểu, Đà Nẵng"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Phường An Khê, Đà Nẵng"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Phường Hải Vân, Đà Nẵng"
+        }
+      ],
+      "knowsAbout": [
+        "Rối loạn phổ tự kỷ",
+        "Rối loạn tăng động giảm chú ý",
+        "Chậm nói và phát triển ngôn ngữ",
+        "Can thiệp sớm cho trẻ",
+        "Chăm sóc sau sinh",
+        "Vật lý trị liệu tại nhà",
+        "Phục hồi chức năng tại nhà"
+      ],
+      "sameAs": ["https://www.facebook.com/joycarevietnam","https://zalo.me/0932558788","https://www.tiktok.com/@joycare.vn","https://www.youtube.com/@joycare_vn","https://x.com/joycare_vn","https://www.instagram.com/joycare.vn/","https://www.pinterest.com/Joycare_vn/"],
+      "hasOfferCatalog": {
+        "@id": "https://joycare.vn/#dich-vu"
+      }
     },
     {
       "@type": "WebSite",
@@ -83,18 +156,112 @@
       "url": "https://joycare.vn/",
       "name": "JoyCare.vn",
       "inLanguage": "vi-VN",
-      "publisher": {"@id": "https://joycare.vn/#organization"}
+      "publisher": {
+        "@id": "https://joycare.vn/#organization"
+      }
     },
     {
       "@type": "OfferCatalog",
+      "@id": "https://joycare.vn/#dich-vu",
       "name": "Dịch vụ chăm sóc và can thiệp chuyên biệt của JoyCare",
+      "url": "https://joycare.vn/dich-vu/",
       "itemListElement": [
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Chăm sóc sau sinh", "areaServed": "Đà Nẵng"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Hỗ trợ trẻ em rối loạn phổ tự kỷ (RLPTK)", "areaServed": "Đà Nẵng"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Hỗ trợ trẻ em ADHD", "areaServed": "Đà Nẵng"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Hỗ trợ trẻ chậm nói", "areaServed": "Đà Nẵng"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Vật lý trị liệu tại nhà", "areaServed": "Đà Nẵng"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Phục hồi chức năng tại nhà", "areaServed": "Đà Nẵng"}}
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Hỗ trợ trẻ rối loạn phổ tự kỷ (RLPTK)",
+            "url": "https://joycare.vn/dich-vu/ho-tro-tre-roi-loan-pho-tu-ky/",
+            "serviceType": "Hỗ trợ trẻ rối loạn phổ tự kỷ (RLPTK)",
+            "provider": {
+              "@id": "https://joycare.vn/#organization"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Đà Nẵng"
+            }
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Hỗ trợ trẻ tăng động giảm chú ý (ADHD)",
+            "url": "https://joycare.vn/dich-vu/ho-tro-tre-adhd/",
+            "serviceType": "Hỗ trợ trẻ tăng động giảm chú ý (ADHD)",
+            "provider": {
+              "@id": "https://joycare.vn/#organization"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Đà Nẵng"
+            }
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Hỗ trợ trẻ chậm nói",
+            "url": "https://joycare.vn/dich-vu/ho-tro-tre-cham-noi/",
+            "serviceType": "Hỗ trợ trẻ chậm nói",
+            "provider": {
+              "@id": "https://joycare.vn/#organization"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Đà Nẵng"
+            }
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Chăm sóc sau sinh",
+            "url": "https://joycare.vn/dich-vu/cham-soc-sau-sinh/",
+            "serviceType": "Chăm sóc sau sinh",
+            "provider": {
+              "@id": "https://joycare.vn/#organization"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Đà Nẵng"
+            }
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Vật lý trị liệu tại nhà",
+            "url": "https://joycare.vn/dich-vu/vat-ly-tri-lieu-tai-nha/",
+            "serviceType": "Vật lý trị liệu tại nhà",
+            "provider": {
+              "@id": "https://joycare.vn/#organization"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Đà Nẵng"
+            }
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Phục hồi chức năng tại nhà",
+            "url": "https://joycare.vn/dich-vu/phuc-hoi-chuc-nang-tai-nha/",
+            "serviceType": "Phục hồi chức năng tại nhà",
+            "provider": {
+              "@id": "https://joycare.vn/#organization"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Đà Nẵng"
+            }
+          }
+        }
       ]
     }
   ]
