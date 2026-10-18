@@ -1,6 +1,6 @@
 # JoyCare.vn
 
-> JoyCare.vn là dịch vụ chăm sóc và can thiệp chuyên biệt tại nhà ở Đà Nẵng, gồm hỗ trợ trẻ rối loạn phổ tự kỷ, ADHD, chậm nói, chăm sóc sau sinh, vật lý trị liệu và phục hồi chức năng. Hiện JoyCare đang trong giai đoạn chuẩn bị dịch vụ và mời gia đình để lại nhu cầu để được liên hệ khi khu vực của mình sẵn sàng.
+> JoyCare.vn là dịch vụ chăm sóc và can thiệp chuyên biệt tại nhà ở Đà Nẵng và Đồng Hới (Quảng Trị), gồm hỗ trợ trẻ rối loạn phổ tự kỷ, ADHD, chậm nói, chăm sóc sau sinh, vật lý trị liệu và phục hồi chức năng. Tại Đà Nẵng, JoyCare đang trong giai đoạn chuẩn bị dịch vụ và mời gia đình để lại nhu cầu để được liên hệ khi khu vực của mình sẵn sàng. Tại Đồng Hới, JoyCare đã có dịch vụ tại nhà ở ba phường Đồng Hới, Đồng Thuận và Đồng Sơn.
 
 ## Dịch vụ
 
@@ -14,6 +14,7 @@
 
 ## Kiến thức
 
+- [Chăm sóc và can thiệp tại nhà ở Đồng Hới, Quảng Trị](https://joycare.vn/blog/cham-soc-va-can-thiep-tai-nha-dong-hoi-quang-tri/): khu vực phục vụ và cách để lại nhu cầu
 - [Blog Góc chia sẻ](https://joycare.vn/blog/): bài viết cho gia đình về chăm sóc và can thiệp tại nhà
 - [Phục hồi chức năng sau tai biến: tác dụng thật và khi nào bắt đầu](https://joycare.vn/blog/phuc-hoi-chuc-nang-sau-tai-bien-tac-dung/)
 - [Chuẩn bị buổi đánh giá can thiệp sớm đầu tiên cho con](https://joycare.vn/blog/chuan-bi-buoi-danh-gia-can-thiep-som-dau-tien-cho-con/)
@@ -26,7 +27,8 @@
 - Email: lienhe@joycare.vn
 - Địa chỉ: 71 Nguyễn Chánh, phường Liên Chiểu, Đà Nẵng
 - Zalo: https://zalo.me/0932558788
-- Khu vực phục vụ: các phường của Đà Nẵng, bao gồm Hải Châu, Thanh Khê, An Hải, Sơn Trà, Ngũ Hành Sơn, Cẩm Lệ, Hòa Cường, Hòa Xuân, Hòa Khánh, Liên Chiểu, An Khê và Hải Vân
+- Khu vực phục vụ tại Đà Nẵng: các phường gồm Hải Châu, Thanh Khê, An Hải, Sơn Trà, Ngũ Hành Sơn, Cẩm Lệ, Hòa Cường, Hòa Xuân, Hòa Khánh, Liên Chiểu, An Khê và Hải Vân
+- Khu vực phục vụ tại Quảng Trị: phường Đồng Hới, phường Đồng Thuận và phường Đồng Sơn (thành phố Đồng Hới cũ)
 
 ## Lưu ý
 
