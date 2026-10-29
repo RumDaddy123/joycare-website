@@ -3,13 +3,42 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PWKZ1FE7CQ"></script>
+<!-- Analytics chỉ được tải sau khi khách đồng ý cookie. -->
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-PWKZ1FE7CQ');
+  (function(){
+    const CONSENT_KEY = 'joycare_cookie_consent';
+    const GA_ID = 'G-PWKZ1FE7CQ';
+    let analyticsLoaded = false;
+    function getConsent(){
+      try { return localStorage.getItem(CONSENT_KEY); } catch(_error) { return null; }
+    }
+    function loadAnalytics(){
+      if(analyticsLoaded) return;
+      analyticsLoaded = true;
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function(){ window.dataLayer.push(arguments); };
+      window.gtag('js', new Date());
+      window.gtag('config', GA_ID, {anonymize_ip:true});
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+      document.head.appendChild(script);
+    }
+    window.joycareAnalytics = {
+      getConsent,
+      setConsent(value){
+        try { localStorage.setItem(CONSENT_KEY, value); } catch(_error) {}
+        if(value === 'accepted') loadAnalytics();
+      },
+      load: loadAnalytics
+    };
+    window.joycareTrack = function(name, params){
+      if(getConsent() !== 'accepted') return;
+      loadAnalytics();
+      window.gtag('event', name, params || {});
+    };
+    if(getConsent() === 'accepted') loadAnalytics();
+  }());
 </script>
 <meta name="theme-color" content="#173C39">
 <title>Chăm sóc & can thiệp chuyên biệt tại nhà Đà Nẵng | JoyCare.vn</title>
@@ -368,6 +397,19 @@
   .registration-card textarea{min-height:7.5rem;resize:vertical;}
   .form-status{min-height:1.4rem;margin-top:.85rem;font-size:.84rem;color:var(--jc-teal-mid);}
   .form-status.error{color:var(--jc-coral);}
+  .form-help{margin:.4rem 0 0;font-size:.78rem;line-height:1.45;color:var(--jc-teal-mid);}
+  .consent-row{display:flex;align-items:flex-start;gap:.7rem;margin-top:.2rem;font-weight:400;font-size:.82rem;line-height:1.5;color:var(--jc-teal-mid);}
+  .consent-row input{width:1.1rem;min-width:1.1rem;height:1.1rem;margin:.12rem 0 0;padding:0;accent-color:var(--jc-teal-deep);}
+  .consent-row a{font-weight:700;color:var(--jc-teal-deep);text-decoration:underline;}
+  .honeypot{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important;}
+  .cookie-consent{position:fixed;left:1rem;right:1rem;bottom:1rem;z-index:120;display:flex;justify-content:center;pointer-events:none;}
+  .cookie-consent__inner{max-width:48rem;width:100%;display:flex;align-items:center;gap:1rem;justify-content:space-between;padding:1rem 1.15rem;border:1px solid var(--jc-line);border-radius:1rem;background:#fff;box-shadow:0 18px 42px rgba(23,60,57,.22);pointer-events:auto;}
+  .cookie-consent p{margin:0;font-size:.82rem;line-height:1.45;color:var(--jc-teal-mid);}
+  .cookie-consent a{font-weight:700;color:var(--jc-teal-deep);text-decoration:underline;}
+  .cookie-consent__actions{display:flex;gap:.55rem;flex-shrink:0;}
+  .cookie-consent__actions button{border:1px solid var(--jc-line);border-radius:999px;padding:.56rem .8rem;background:#fff;color:var(--jc-teal-deep);font:inherit;font-size:.8rem;font-weight:700;cursor:pointer;}
+  .cookie-consent__actions button:last-child{background:var(--jc-teal-deep);border-color:var(--jc-teal-deep);color:#fff;}
+  @media (max-width:639px){.cookie-consent{left:.75rem;right:.75rem;bottom:.75rem}.cookie-consent__inner{display:block}.cookie-consent__actions{margin-top:.85rem;justify-content:flex-end;}}
   .process-step{position:relative;}
   @media (min-width:768px){.process-step:not(:last-child)::after{content:'';position:absolute;top:1.75rem;left:calc(50% + 3.2rem);width:calc(100% - 6.4rem);height:1px;background:rgba(255,255,255,.24);}}
 
@@ -661,22 +703,22 @@
 <section id="dang-ky" class="registration-section px-5 md:px-8 py-20">
   <div class="max-w-7xl mx-auto">
     <p class="eyebrow text-center mb-3" data-i18n="registration.eyebrow">BẮT ĐẦU KẾT NỐI</p>
-    <h2 class="section-heading font-display text-3xl md:text-4xl text-teal-deep text-center mb-4" data-i18n="registration.title">Chia sẻ nhu cầu, JoyCare sẽ liên hệ khi phù hợp</h2>
-    <p class="text-teal-mid text-center max-w-2xl mx-auto mb-10" data-i18n="registration.subtitle">Chọn biểu mẫu phù hợp. Thông tin giúp JoyCare gửi tài liệu và liên hệ khi triển khai phù hợp.</p>
+    <h2 class="section-heading font-display text-3xl md:text-4xl text-teal-deep text-center mb-4" data-i18n="registration.title">Vào danh sách chờ nhận thông tin</h2>
+    <p class="text-teal-mid text-center max-w-2xl mx-auto mb-10" data-i18n="registration.subtitle">Chọn biểu mẫu phù hợp để chia sẻ nhu cầu. Đây chưa phải xác nhận đặt lịch hay ghép người hỗ trợ.</p>
 
     <div id="registrationChoices" class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto" role="group" aria-label="Chọn loại đăng ký">
       <button type="button" class="registration-choice card" data-registration-type="customer">
         <div class="w-12 h-12 rounded-2xl bg-sage/50 text-teal-deep flex items-center justify-center mb-5"><i data-lucide="heart-handshake" class="w-6 h-6"></i></div>
         <p class="eyebrow mb-2" data-i18n="customerForm.eyebrow">DÀNH CHO GIA ĐÌNH</p>
-        <h3 class="font-display text-2xl text-teal-deep mb-2" data-i18n="customerForm.title">Đăng ký nhận thông tin (Gia đình)</h3>
-        <p class="text-sm text-teal-mid" data-i18n="registration.customerChoice">Bạn quan tâm dịch vụ chăm sóc tại nhà — để lại thông tin để nhận tài liệu và được báo khi mở.</p>
+        <h3 class="font-display text-2xl text-teal-deep mb-2" data-i18n="customerForm.title">Vào danh sách chờ nhận thông tin</h3>
+        <p class="text-sm text-teal-mid" data-i18n="registration.customerChoice">Bạn quan tâm dịch vụ chăm sóc tại nhà — để lại nhu cầu để được báo khi dịch vụ phù hợp mở.</p>
         <span class="choice-arrow" data-i18n="registration.chooseForm">Chọn biểu mẫu này →</span>
       </button>
       <button type="button" class="registration-choice card" data-registration-type="caregiver">
         <div class="w-12 h-12 rounded-2xl bg-amber/25 text-teal-deep flex items-center justify-center mb-5"><i data-lucide="badge-check" class="w-6 h-6"></i></div>
         <p class="eyebrow mb-2" data-i18n="caregiverForm.eyebrow">DÀNH CHO NGƯỜI CHĂM SÓC</p>
-        <h3 class="font-display text-2xl text-teal-deep mb-2" data-i18n="caregiverForm.title">Đăng ký CTV đợt chuẩn bị</h3>
-        <p class="text-sm text-teal-mid" data-i18n="registration.caregiverChoice">Bạn muốn tham gia mạng lưới CTV đợt chuẩn bị.</p>
+        <h3 class="font-display text-2xl text-teal-deep mb-2" data-i18n="caregiverForm.title">Bày tỏ quan tâm làm CTV</h3>
+        <p class="text-sm text-teal-mid" data-i18n="registration.caregiverChoice">Bạn muốn được thông báo về đợt tuyển chọn cộng tác viên khi phù hợp.</p>
         <span class="choice-arrow" data-i18n="registration.chooseForm">Chọn biểu mẫu này →</span>
       </button>
     </div>
@@ -686,9 +728,10 @@
         <button type="button" class="text-sm text-teal-mid underline mb-5" data-registration-back data-i18n="registration.backToChoices">← Chọn lại nhu cầu</button>
         <div class="w-12 h-12 rounded-2xl bg-sage/50 text-teal-deep flex items-center justify-center mb-5"><i data-lucide="heart-handshake" class="w-6 h-6"></i></div>
         <p class="eyebrow mb-2" data-i18n="customerForm.eyebrow">DÀNH CHO GIA ĐÌNH</p>
-        <h3 class="font-display text-2xl text-teal-deep mb-2" data-i18n="customerForm.title">Đăng ký nhận thông tin (Gia đình)</h3>
-        <p class="text-sm text-teal-mid mb-6" data-i18n="customerForm.subtitle">Điền thông tin, JoyCare sẽ gửi tài liệu và liên hệ khi triển khai tại khu vực bạn.</p>
+        <h3 class="font-display text-2xl text-teal-deep mb-2" data-i18n="customerForm.title">Vào danh sách chờ nhận thông tin</h3>
+        <p class="text-sm text-teal-mid mb-6" data-i18n="customerForm.subtitle">JoyCare chưa nhận đặt lịch. Hãy để lại nhu cầu để nhận thông tin khi dịch vụ phù hợp mở tại khu vực bạn.</p>
         <form id="customerForm" class="space-y-4">
+          <div class="honeypot" aria-hidden="true"><label for="customerWebsite">Website</label><input id="customerWebsite" name="website" type="text" tabindex="-1" autocomplete="off"></div>
           <div class="grid sm:grid-cols-2 gap-4">
             <div><label for="customerName" data-i18n="customerForm.name">Họ và tên</label><input id="customerName" name="name" type="text" autocomplete="name" required></div>
             <div><label for="customerPhone" data-i18n="customerForm.phone">Số điện thoại</label><input id="customerPhone" name="phone" type="tel" autocomplete="tel" inputmode="tel" pattern="[0-9 +().-]{8,20}" required></div>
@@ -698,8 +741,9 @@
             <div><label for="customerCity" data-i18n="customerForm.city">Khu vực</label><input id="customerCity" name="city" type="text" autocomplete="address-level2" placeholder="Ví dụ: Hải Châu, Đà Nẵng" data-i18n-placeholder="customerForm.cityPlaceholder" required></div>
           </div>
           <div><label for="customerSchedule" data-i18n="customerForm.schedule">Thời gian cần</label><select id="customerSchedule" name="schedule" required><option value="" selected disabled data-i18n="customerForm.schedulePlaceholder">-- Chọn thời gian --</option><option value="fulltime" data-i18n="customerForm.fulltime">Toàn thời gian</option><option value="parttime" data-i18n="customerForm.parttime">Bán thời gian</option><option value="hourly" data-i18n="customerForm.hourly">Theo giờ</option><option value="consultation" data-i18n="customerForm.consultation">Cần tư vấn trước</option></select></div>
-          <div><label for="customerNotes" data-i18n="customerForm.notes">Ghi chú thêm</label><textarea id="customerNotes" name="notes" placeholder="Nhu cầu, thời điểm mong muốn hoặc điều bạn muốn JoyCare lưu ý" data-i18n-placeholder="customerForm.notesPlaceholder"></textarea></div>
-          <button type="submit" class="btn-primary w-full justify-center"><i data-lucide="send" class="w-5 h-5"></i><span data-i18n="customerForm.submit">Gửi đăng ký</span></button>
+          <div><label for="customerNotes" data-i18n="customerForm.notes">Ghi chú thêm</label><textarea id="customerNotes" name="notes" maxlength="1000" placeholder="Nhu cầu, thời điểm mong muốn hoặc điều bạn muốn JoyCare lưu ý" data-i18n-placeholder="customerForm.notesPlaceholder"></textarea><p class="form-help" data-i18n="form.sensitiveInfoHint">Không gửi hồ sơ bệnh án, kết quả xét nghiệm, đơn thuốc hoặc giấy tờ tùy thân qua biểu mẫu này.</p></div>
+          <label class="consent-row" for="customerConsent"><input id="customerConsent" name="consent" type="checkbox" value="privacy-v2026-10-29" required><span data-i18n="form.privacyConsent">Tôi đã đọc <a href="/chinh-sach-bao-mat/">Chính sách bảo mật</a> và đồng ý để JoyCare dùng thông tin này để liên hệ về nhu cầu tôi đã gửi.</span></label>
+          <button type="submit" class="btn-primary w-full justify-center"><i data-lucide="send" class="w-5 h-5"></i><span data-i18n="customerForm.submit">Gửi nhu cầu</span></button>
           <p class="form-status" data-form-status aria-live="polite"></p>
         </form>
       </article>
@@ -708,9 +752,10 @@
         <button type="button" class="text-sm text-teal-mid underline mb-5" data-registration-back data-i18n="registration.backToChoices">← Chọn lại nhu cầu</button>
         <div class="w-12 h-12 rounded-2xl bg-amber/25 text-teal-deep flex items-center justify-center mb-5"><i data-lucide="badge-check" class="w-6 h-6"></i></div>
         <p class="eyebrow mb-2" data-i18n="caregiverForm.eyebrow">DÀNH CHO NGƯỜI CHĂM SÓC</p>
-        <h3 class="font-display text-2xl text-teal-deep mb-2" data-i18n="caregiverForm.title">Đăng ký CTV đợt chuẩn bị</h3>
-        <p class="text-sm text-teal-mid mb-6" data-i18n="caregiverForm.subtitle">Tham gia đợt chuẩn bị mạng lưới, JoyCare sẽ liên hệ phỏng vấn khi phù hợp.</p>
+        <h3 class="font-display text-2xl text-teal-deep mb-2" data-i18n="caregiverForm.title">Bày tỏ quan tâm làm CTV</h3>
+        <p class="text-sm text-teal-mid mb-6" data-i18n="caregiverForm.subtitle">Đây chưa phải là xác nhận vào mạng lưới hoặc lịch phỏng vấn. JoyCare sẽ liên hệ khi có đợt tuyển chọn phù hợp.</p>
         <form id="caregiverForm" class="space-y-4">
+          <div class="honeypot" aria-hidden="true"><label for="caregiverWebsite">Website</label><input id="caregiverWebsite" name="website" type="text" tabindex="-1" autocomplete="off"></div>
           <div class="grid sm:grid-cols-2 gap-4">
             <div><label for="caregiverName" data-i18n="caregiverForm.name">Họ và tên</label><input id="caregiverName" name="name" type="text" autocomplete="name" required></div>
             <div><label for="caregiverPhone" data-i18n="caregiverForm.phone">Số điện thoại</label><input id="caregiverPhone" name="phone" type="tel" autocomplete="tel" inputmode="tel" pattern="[0-9 +().-]{8,20}" required></div>
@@ -720,8 +765,9 @@
             <div><label for="caregiverSpecialty" data-i18n="caregiverForm.specialty">Chuyên môn</label><select id="caregiverSpecialty" name="specialty" required><option value="" selected disabled data-i18n="caregiverForm.specialtyPlaceholder">-- Chọn chuyên môn --</option><option value="nursing" data-i18n="specialty.nursing">Điều dưỡng / chăm sóc</option><option value="postpartum" data-i18n="specialty.postpartum">Chăm sóc sau sinh</option><option value="early-intervention" data-i18n="specialty.early">Giáo viên can thiệp sớm</option><option value="speech" data-i18n="specialty.speech">Ngôn ngữ trị liệu</option><option value="physio" data-i18n="specialty.physio">Kỹ thuật viên VLTL / PHCN</option><option value="other" data-i18n="specialty.other">Chuyên môn khác</option></select></div>
           </div>
           <div><label for="caregiverCity" data-i18n="caregiverForm.city">Khu vực làm việc</label><input id="caregiverCity" name="city" type="text" autocomplete="address-level2" placeholder="Ví dụ: Sơn Trà, Đà Nẵng" data-i18n-placeholder="caregiverForm.cityPlaceholder" required></div>
-          <div><label for="caregiverCertificate" data-i18n="caregiverForm.certificate">Chứng chỉ / bằng cấp liên quan</label><textarea id="caregiverCertificate" name="certificate" placeholder="Nêu bằng cấp, chứng chỉ hoặc kinh nghiệm phù hợp" data-i18n-placeholder="caregiverForm.certificatePlaceholder"></textarea></div>
-          <button type="submit" class="btn-primary w-full justify-center"><i data-lucide="send" class="w-5 h-5"></i><span data-i18n="caregiverForm.submit">Gửi đăng ký</span></button>
+          <div><label for="caregiverCertificate" data-i18n="caregiverForm.certificate">Chứng chỉ / bằng cấp liên quan</label><textarea id="caregiverCertificate" name="certificate" maxlength="1500" placeholder="Nêu bằng cấp, chứng chỉ hoặc kinh nghiệm phù hợp" data-i18n-placeholder="caregiverForm.certificatePlaceholder"></textarea><p class="form-help" data-i18n="form.sensitiveInfoHint">Không gửi hồ sơ bệnh án, kết quả xét nghiệm, đơn thuốc hoặc giấy tờ tùy thân qua biểu mẫu này.</p></div>
+          <label class="consent-row" for="caregiverConsent"><input id="caregiverConsent" name="consent" type="checkbox" value="privacy-v2026-10-29" required><span data-i18n="form.privacyConsent">Tôi đã đọc <a href="/chinh-sach-bao-mat/">Chính sách bảo mật</a> và đồng ý để JoyCare dùng thông tin này để liên hệ về nhu cầu tôi đã gửi.</span></label>
+          <button type="submit" class="btn-primary w-full justify-center"><i data-lucide="send" class="w-5 h-5"></i><span data-i18n="caregiverForm.submit">Gửi thông tin quan tâm</span></button>
           <p class="form-status" data-form-status aria-live="polite"></p>
         </form>
       </article>
@@ -767,12 +813,12 @@
   <p class="eyebrow text-center mb-3" data-i18n="blog.eyebrow">GÓC CHIA SẺ</p>
   <h2 class="section-heading font-display text-3xl md:text-4xl text-teal-deep text-center mb-3" data-i18n="blog.title">Blog JoyCare</h2>
   <p class="text-teal-mid text-center max-w-2xl mx-auto mb-12" data-i18n="blog.subtitle">Kiến thức chăm sóc, phục hồi chức năng và những câu chuyện từ mạng lưới JoyCare.</p>
-  <div id="blogGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10"><a class="card p-6 flex flex-col" href="/blog/cham-soc-va-can-thiep-tai-nha-dong-hoi-quang-tri/" aria-label="Đọc bài: Chăm sóc và can thiệp tại nhà ở Đồng Hới, Quảng Trị: khu vực phục vụ và cách đăng ký"><picture><source srcset="/assets/blog/phuc-hoi-chuc-nang-tai-nha.webp" type="image/webp"><img src="/assets/blog/phuc-hoi-chuc-nang-tai-nha.jpg" alt="Chăm sóc và can thiệp tại nhà ở Đồng Hới, Quảng Trị: khu vực phục vụ và cách đăng ký" class="w-full h-36 object-cover rounded-xl mb-4" width="1200" height="675" loading="lazy" decoding="async"></picture><p class="font-mono text-xs text-teal-mid mb-3">18/10/2026</p><h3 class="font-semibold text-teal-deep mb-2">Chăm sóc và can thiệp tại nhà ở Đồng Hới, Quảng Trị: khu vực phục vụ và cách đăng ký</h3><p class="text-sm text-teal-mid mb-4 flex-1">Dịch vụ tại nhà cho gia đình ở Đồng Hới: khu vực phục vụ, các nhóm dịch vụ và cách để lại nhu cầu với JoyCare.</p><div class="flex flex-wrap gap-1.5 mb-3"><span class="tag-pill clickable" onclick='event.preventDefault(); event.stopPropagation(); filterBlogByTag("dong-hoi")'>#dong-hoi</span><span class="tag-pill clickable" onclick='event.preventDefault(); event.stopPropagation(); filterBlogByTag("quang-tri")'>#quang-tri</span><span class="tag-pill clickable" onclick='event.preventDefault(); event.stopPropagation(); filterBlogByTag("cham-soc-tai-nha")'>#cham-soc-tai-nha</span></div><span class="text-sm font-semibold text-amber">Đọc thêm →</span></a><a class="card p-6 flex flex-col" href="/blog/cham-soc-me-sau-sinh-tai-nha-6-tuan-dau/" aria-label="Đọc bài: Chăm sóc mẹ sau sinh tại nhà: sáu tuần đầu cần theo dõi gì?"><picture><source srcset="/assets/blog/cham-soc-me-sau-sinh-tai-nha.webp" type="image/webp"><img src="/assets/blog/cham-soc-me-sau-sinh-tai-nha.jpg" alt="Chăm sóc mẹ sau sinh tại nhà: sáu tuần đầu cần theo dõi gì?" class="w-full h-36 object-cover rounded-xl mb-4" width="1200" height="675" loading="lazy" decoding="async"></picture><p class="font-mono text-xs text-teal-mid mb-3">15/10/2026</p><h3 class="font-semibold text-teal-deep mb-2">Chăm sóc mẹ sau sinh tại nhà: sáu tuần đầu cần theo dõi gì?</h3><p class="text-sm text-teal-mid mb-4 flex-1">Sáu tuần đầu sau sinh cần theo dõi những gì ở nhà, khi nào gọi bác sĩ và khi nào gọi 115. Nội dung dựa trên hướng dẫn của MSD và WHO.</p><div class="flex flex-wrap gap-1.5 mb-3"><span class="tag-pill clickable" onclick='event.preventDefault(); event.stopPropagation(); filterBlogByTag("cham-soc-sau-sinh")'>#cham-soc-sau-sinh</span><span class="tag-pill clickable" onclick='event.preventDefault(); event.stopPropagation(); filterBlogByTag("suc-khoe-me-va-be")'>#suc-khoe-me-va-be</span><span class="tag-pill clickable" onclick='event.preventDefault(); event.stopPropagation(); filterBlogByTag("tai-nha")'>#tai-nha</span></div><span class="text-sm font-semibold text-amber">Đọc thêm →</span></a><a class="card p-6 flex flex-col" href="/blog/phuc-hoi-chuc-nang-sau-tai-bien-tac-dung/" aria-label="Đọc bài: Phục hồi chức năng sau tai biến: tác dụng thật và khi nào bắt đầu"><picture><source srcset="/assets/blog/phuc-hoi-chuc-nang-sau-tai-bien.webp" type="image/webp"><img src="/assets/blog/phuc-hoi-chuc-nang-sau-tai-bien.jpg" alt="Phục hồi chức năng sau tai biến: tác dụng thật và khi nào bắt đầu" class="w-full h-36 object-cover rounded-xl mb-4" width="1200" height="675" loading="lazy" decoding="async"></picture><p class="font-mono text-xs text-teal-mid mb-3">8/10/2026</p><h3 class="font-semibold text-teal-deep mb-2">Phục hồi chức năng sau tai biến: tác dụng thật và khi nào bắt đầu</h3><p class="text-sm text-teal-mid mb-4 flex-1">Phục hồi chức năng sau tai biến nhắm vào vận động, sinh hoạt hằng ngày và phòng biến chứng. Bài viết nêu rõ bằng chứng hiện có và những điều...</p><div class="flex flex-wrap gap-1.5 mb-3"><span class="tag-pill clickable" onclick='event.preventDefault(); event.stopPropagation(); filterBlogByTag("phuc-hoi-chuc-nang")'>#phuc-hoi-chuc-nang</span><span class="tag-pill clickable" onclick='event.preventDefault(); event.stopPropagation(); filterBlogByTag("dot-quy")'>#dot-quy</span><span class="tag-pill clickable" onclick='event.preventDefault(); event.stopPropagation(); filterBlogByTag("tai-bien")'>#tai-bien</span></div><span class="text-sm font-semibold text-amber">Đọc thêm →</span></a><a class="card p-6 flex flex-col" href="/blog/tuyen-cong-tac-vien-cham-soc-tai-nha-da-nang-dot-chuan-bi/" aria-label="Đọc bài: JoyCare tìm cộng tác viên chăm sóc tại nhà ở Đà Nẵng (đợt chuẩn bị)"><picture><source srcset="/assets/blog/tuyen-ctv-dot-chuan-bi.webp" type="image/webp"><img src="/assets/blog/tuyen-ctv-dot-chuan-bi.jpg" alt="JoyCare tìm cộng tác viên chăm sóc tại nhà ở Đà Nẵng (đợt chuẩn bị)" class="w-full h-36 object-cover rounded-xl mb-4" width="1200" height="675" loading="lazy" decoding="async"></picture><p class="font-mono text-xs text-teal-mid mb-3">15/9/2026</p><h3 class="font-semibold text-teal-deep mb-2">JoyCare tìm cộng tác viên chăm sóc tại nhà ở Đà Nẵng (đợt chuẩn bị)</h3><p class="text-sm text-teal-mid mb-4 flex-1">JoyCare đang chuẩn bị mạng lưới CTV tại Đà Nẵng: điều dưỡng, chăm sóc sau sinh, giáo viên can thiệp sớm và KTV VLTL/PHCN. Hồ sơ đạt được phỏ...</p><div class="flex flex-wrap gap-1.5 mb-3"><span class="tag-pill clickable" onclick='event.preventDefault(); event.stopPropagation(); filterBlogByTag("tuyen-dung")'>#tuyen-dung</span><span class="tag-pill clickable" onclick='event.preventDefault(); event.stopPropagation(); filterBlogByTag("ctv")'>#ctv</span><span class="tag-pill clickable" onclick='event.preventDefault(); event.stopPropagation(); filterBlogByTag("da-nang")'>#da-nang</span></div><span class="text-sm font-semibold text-amber">Đọc thêm →</span></a><a class="card p-6 flex flex-col" href="/blog/chuan-bi-buoi-danh-gia-can-thiep-som-dau-tien-cho-con/" aria-label="Đọc bài: Chuẩn bị gì cho buổi đánh giá can thiệp sớm đầu tiên của con?"><picture><source srcset="/assets/blog/danh-gia-can-thiep-som.webp" type="image/webp"><img src="/assets/blog/danh-gia-can-thiep-som.jpg" alt="Chuẩn bị gì cho buổi đánh giá can thiệp sớm đầu tiên của con?" class="w-full h-36 object-cover rounded-xl mb-4" width="1200" height="675" loading="lazy" decoding="async"></picture><p class="font-mono text-xs text-teal-mid mb-3">15/9/2026</p><h3 class="font-semibold text-teal-deep mb-2">Chuẩn bị gì cho buổi đánh giá can thiệp sớm đầu tiên của con?</h3><p class="text-sm text-teal-mid mb-4 flex-1">Nhật ký 1-2 tuần, 2 video ngắn, hồ sơ sức khỏe và danh sách câu hỏi — 4 thứ giúp buổi đánh giá can thiệp sớm đầu tiên của con thu được thông...</p><div class="flex flex-wrap gap-1.5 mb-3"><span class="tag-pill clickable" onclick='event.preventDefault(); event.stopPropagation(); filterBlogByTag("can-thiep-som")'>#can-thiep-som</span><span class="tag-pill clickable" onclick='event.preventDefault(); event.stopPropagation(); filterBlogByTag("danh-gia")'>#danh-gia</span><span class="tag-pill clickable" onclick='event.preventDefault(); event.stopPropagation(); filterBlogByTag("tre-em")'>#tre-em</span></div><span class="text-sm font-semibold text-amber">Đọc thêm →</span></a></div>
+  <div id="blogGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10"><a class="card p-6 flex flex-col" href="/blog/phuc-hoi-chuc-nang-tai-nha-dong-hoi-quang-tri-chuan-bi-an-toan/" aria-label="Đọc bài: Phục hồi chức năng tại nhà ở Đồng Hới, Quảng Trị: chuẩn bị gì để tập an toàn?"><picture><source srcset="/assets/blog/phuc-hoi-chuc-nang-tai-nha.webp" type="image/webp"><img src="/assets/blog/phuc-hoi-chuc-nang-tai-nha.jpg" alt="Phục hồi chức năng tại nhà ở Đồng Hới, Quảng Trị: chuẩn bị gì để tập an toàn?" class="w-full h-36 object-cover rounded-xl mb-4" width="1200" height="675" loading="lazy" decoding="async"></picture><p class="font-mono text-xs text-teal-mid mb-3">29/10/2026</p><h3 class="font-semibold text-teal-deep mb-2">Phục hồi chức năng tại nhà ở Đồng Hới, Quảng Trị: chuẩn bị gì để tập an toàn?</h3><p class="text-sm text-teal-mid mb-4 flex-1">Checklist giúp gia đình ở Đồng Hới chuẩn bị một buổi phục hồi chức năng tại nhà an toàn, bám theo kế hoạch chuyên môn đang có.</p><div class="flex flex-wrap gap-1.5 mb-3"><span class="tag-pill clickable" onclick='event.preventDefault(); event.stopPropagation(); filterBlogByTag("phuc-hoi-chuc-nang")'>#phuc-hoi-chuc-nang</span><span class="tag-pill clickable" onclick='event.preventDefault(); event.stopPropagation(); filterBlogByTag("vat-ly-tri-lieu")'>#vat-ly-tri-lieu</span><span class="tag-pill clickable" onclick='event.preventDefault(); event.stopPropagation(); filterBlogByTag("dong-hoi")'>#dong-hoi</span></div><span class="text-sm font-semibold text-amber">Đọc thêm →</span></a><a class="card p-6 flex flex-col" href="/blog/tim-ho-tro-cham-soc-tai-nha-da-nang/" aria-label="Đọc bài: Tìm hỗ trợ chăm sóc tại nhà ở Đà Nẵng: 7 câu hỏi nên chuẩn bị trước"><picture><source srcset="/assets/joycare-hero-care.webp" type="image/webp"><img src="/assets/joycare-hero-care.jpg" alt="Tìm hỗ trợ chăm sóc tại nhà ở Đà Nẵng: 7 câu hỏi nên chuẩn bị trước" class="w-full h-36 object-cover rounded-xl mb-4" width="1200" height="675" loading="lazy" decoding="async"></picture><p class="font-mono text-xs text-teal-mid mb-3">29/10/2026</p><h3 class="font-semibold text-teal-deep mb-2">Tìm hỗ trợ chăm sóc tại nhà ở Đà Nẵng: 7 câu hỏi nên chuẩn bị trước</h3><p class="text-sm text-teal-mid mb-4 flex-1">Bảy câu hỏi giúp gia đình ở Đà Nẵng làm rõ nhu cầu, phạm vi hỗ trợ và cách phối hợp an toàn trước khi tìm người đồng hành tại nhà.</p><div class="flex flex-wrap gap-1.5 mb-3"><span class="tag-pill clickable" onclick='event.preventDefault(); event.stopPropagation(); filterBlogByTag("cham-soc-tai-nha")'>#cham-soc-tai-nha</span><span class="tag-pill clickable" onclick='event.preventDefault(); event.stopPropagation(); filterBlogByTag("da-nang")'>#da-nang</span><span class="tag-pill clickable" onclick='event.preventDefault(); event.stopPropagation(); filterBlogByTag("ho-tro-gia-dinh")'>#ho-tro-gia-dinh</span></div><span class="text-sm font-semibold text-amber">Đọc thêm →</span></a><a class="card p-6 flex flex-col" href="/blog/cham-soc-va-can-thiep-tai-nha-dong-hoi-quang-tri/" aria-label="Đọc bài: Chăm sóc và hỗ trợ tại nhà ở Đồng Hới, Quảng Trị: cách chuẩn bị nhu cầu"><picture><source srcset="/assets/blog/phuc-hoi-chuc-nang-tai-nha.webp" type="image/webp"><img src="/assets/blog/phuc-hoi-chuc-nang-tai-nha.jpg" alt="Chăm sóc và hỗ trợ tại nhà ở Đồng Hới, Quảng Trị: cách chuẩn bị nhu cầu" class="w-full h-36 object-cover rounded-xl mb-4" width="1200" height="675" loading="lazy" decoding="async"></picture><p class="font-mono text-xs text-teal-mid mb-3">18/10/2026</p><h3 class="font-semibold text-teal-deep mb-2">Chăm sóc và hỗ trợ tại nhà ở Đồng Hới, Quảng Trị: cách chuẩn bị nhu cầu</h3><p class="text-sm text-teal-mid mb-4 flex-1">Cách ghi nhận nhu cầu tại Đồng Hới, chuẩn bị thông tin tối thiểu và các lưu ý an toàn trong khi chờ thông tin dịch vụ phù hợp.</p><div class="flex flex-wrap gap-1.5 mb-3"><span class="tag-pill clickable" onclick='event.preventDefault(); event.stopPropagation(); filterBlogByTag("dong-hoi")'>#dong-hoi</span><span class="tag-pill clickable" onclick='event.preventDefault(); event.stopPropagation(); filterBlogByTag("quang-tri")'>#quang-tri</span><span class="tag-pill clickable" onclick='event.preventDefault(); event.stopPropagation(); filterBlogByTag("cham-soc-tai-nha")'>#cham-soc-tai-nha</span></div><span class="text-sm font-semibold text-amber">Đọc thêm →</span></a><a class="card p-6 flex flex-col" href="/blog/cham-soc-me-sau-sinh-tai-nha-6-tuan-dau/" aria-label="Đọc bài: Chăm sóc mẹ sau sinh tại nhà: sáu tuần đầu cần theo dõi gì?"><picture><source srcset="/assets/blog/cham-soc-me-sau-sinh-tai-nha.webp" type="image/webp"><img src="/assets/blog/cham-soc-me-sau-sinh-tai-nha.jpg" alt="Chăm sóc mẹ sau sinh tại nhà: sáu tuần đầu cần theo dõi gì?" class="w-full h-36 object-cover rounded-xl mb-4" width="1200" height="675" loading="lazy" decoding="async"></picture><p class="font-mono text-xs text-teal-mid mb-3">15/10/2026</p><h3 class="font-semibold text-teal-deep mb-2">Chăm sóc mẹ sau sinh tại nhà: sáu tuần đầu cần theo dõi gì?</h3><p class="text-sm text-teal-mid mb-4 flex-1">Sáu tuần đầu sau sinh cần theo dõi những gì ở nhà, khi nào gọi bác sĩ và khi nào gọi 115. Nội dung dựa trên hướng dẫn của MSD và WHO.</p><div class="flex flex-wrap gap-1.5 mb-3"><span class="tag-pill clickable" onclick='event.preventDefault(); event.stopPropagation(); filterBlogByTag("cham-soc-sau-sinh")'>#cham-soc-sau-sinh</span><span class="tag-pill clickable" onclick='event.preventDefault(); event.stopPropagation(); filterBlogByTag("suc-khoe-me-va-be")'>#suc-khoe-me-va-be</span><span class="tag-pill clickable" onclick='event.preventDefault(); event.stopPropagation(); filterBlogByTag("tai-nha")'>#tai-nha</span></div><span class="text-sm font-semibold text-amber">Đọc thêm →</span></a><a class="card p-6 flex flex-col" href="/blog/phuc-hoi-chuc-nang-sau-tai-bien-tac-dung/" aria-label="Đọc bài: Phục hồi chức năng sau tai biến: tác dụng thật và khi nào bắt đầu"><picture><source srcset="/assets/blog/phuc-hoi-chuc-nang-sau-tai-bien.webp" type="image/webp"><img src="/assets/blog/phuc-hoi-chuc-nang-sau-tai-bien.jpg" alt="Phục hồi chức năng sau tai biến: tác dụng thật và khi nào bắt đầu" class="w-full h-36 object-cover rounded-xl mb-4" width="1200" height="675" loading="lazy" decoding="async"></picture><p class="font-mono text-xs text-teal-mid mb-3">8/10/2026</p><h3 class="font-semibold text-teal-deep mb-2">Phục hồi chức năng sau tai biến: tác dụng thật và khi nào bắt đầu</h3><p class="text-sm text-teal-mid mb-4 flex-1">Phục hồi chức năng sau tai biến nhắm vào vận động, sinh hoạt hằng ngày và phòng biến chứng. Bài viết nêu rõ bằng chứng hiện có và những điều...</p><div class="flex flex-wrap gap-1.5 mb-3"><span class="tag-pill clickable" onclick='event.preventDefault(); event.stopPropagation(); filterBlogByTag("phuc-hoi-chuc-nang")'>#phuc-hoi-chuc-nang</span><span class="tag-pill clickable" onclick='event.preventDefault(); event.stopPropagation(); filterBlogByTag("dot-quy")'>#dot-quy</span><span class="tag-pill clickable" onclick='event.preventDefault(); event.stopPropagation(); filterBlogByTag("tai-bien")'>#tai-bien</span></div><span class="text-sm font-semibold text-amber">Đọc thêm →</span></a></div>
   <div id="blogPagination" class="flex items-center justify-center gap-2 font-mono text-sm"></div>
   <div class="flex justify-center mt-10">
     <a href="/blog/" class="btn-outline !py-2.5 text-sm"><span data-i18n="blog.viewAll">Xem tất cả bài viết</span> <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
   </div>
-  <noscript><ul style="max-width:56rem;margin:1.5rem auto 0;line-height:2;"><li><a href="/blog/cham-soc-va-can-thiep-tai-nha-dong-hoi-quang-tri/">Chăm sóc và can thiệp tại nhà ở Đồng Hới, Quảng Trị: khu vực phục vụ và cách đăng ký</a></li><li><a href="/blog/cham-soc-me-sau-sinh-tai-nha-6-tuan-dau/">Chăm sóc mẹ sau sinh tại nhà: sáu tuần đầu cần theo dõi gì?</a></li><li><a href="/blog/phuc-hoi-chuc-nang-sau-tai-bien-tac-dung/">Phục hồi chức năng sau tai biến: tác dụng thật và khi nào bắt đầu</a></li><li><a href="/blog/tuyen-cong-tac-vien-cham-soc-tai-nha-da-nang-dot-chuan-bi/">JoyCare tìm cộng tác viên chăm sóc tại nhà ở Đà Nẵng (đợt chuẩn bị)</a></li><li><a href="/blog/chuan-bi-buoi-danh-gia-can-thiep-som-dau-tien-cho-con/">Chuẩn bị gì cho buổi đánh giá can thiệp sớm đầu tiên của con?</a></li><li><a href="/blog/day-tre-khuyet-tat-tai-nha-5-phuong-phap-cha-me-nen-biet/">Dạy trẻ khuyết tật tại nhà: 5 phương pháp cha mẹ nên biết</a></li><li><a href="/blog/tre-tu-ky-nhe-7-dau-hieu-som-cha-me-de-bo-qua/">Trẻ tự kỷ nhẹ: 7 dấu hiệu sớm cha mẹ dễ bỏ qua</a></li><li><a href="/blog/cham-soc-sau-sinh-tai-nha-phuong-hai-chau-da-nang/">Chăm sóc sau sinh tại nhà phường Hải Châu, Đà Nẵng: chuẩn bị gì?</a></li><li><a href="/blog/cham-soc-nguoi-cao-tuoi-tai-nha-phuong-hoa-cuong-da-nang/">Tìm người chăm sóc người cao tuổi tại nhà phường Hòa Cường, Đà Nẵng</a></li><li><a href="/blog/vat-ly-tri-lieu-tai-nha-phuong-an-hai-da-nang/">Vật lý trị liệu tại nhà phường An Hải, Đà Nẵng: chuẩn bị an toàn</a></li><li><a href="/blog/ho-tro-tre-cham-noi-tai-nha-phuong-thanh-khe-da-nang/">Hỗ trợ trẻ chậm nói tại nhà phường Thanh Khê, Đà Nẵng</a></li><li><a href="/blog/ho-tro-tre-tu-ky-adhd-tai-nha-phuong-cam-le-da-nang/">Đồng hành cùng trẻ tự kỷ hoặc ADHD tại nhà phường Cẩm Lệ, Đà Nẵng</a></li><li><a href="/blog/tre-cham-noi-dau-hieu-va-cach-dong-hanh-tai-nha/">Trẻ chậm nói: dấu hiệu cần lưu ý và cách đồng hành tại nhà</a></li><li><a href="/blog/ho-tro-tre-roi-loan-pho-tu-ky-tai-nha/">Hỗ trợ trẻ rối loạn phổ tự kỷ tại nhà: bắt đầu từ nếp sinh hoạt</a></li><li><a href="/blog/dong-hanh-cung-tre-adhd-tai-nha/">Đồng hành cùng trẻ có ADHD tại nhà: 5 thói quen đơn giản</a></li><li><a href="/blog/cham-soc-sau-sinh-tai-nha-6-dieu-can-ho-tro/">Chăm sóc sau sinh tại nhà: 6 điều mẹ cần được hỗ trợ</a></li><li><a href="/blog/phuc-hoi-chuc-nang-tai-nha-tap-an-toan/">Phục hồi chức năng tại nhà: chuẩn bị gì để tập an toàn?</a></li></ul></noscript>
+  <noscript><ul style="max-width:56rem;margin:1.5rem auto 0;line-height:2;"><li><a href="/blog/phuc-hoi-chuc-nang-tai-nha-dong-hoi-quang-tri-chuan-bi-an-toan/">Phục hồi chức năng tại nhà ở Đồng Hới, Quảng Trị: chuẩn bị gì để tập an toàn?</a></li><li><a href="/blog/tim-ho-tro-cham-soc-tai-nha-da-nang/">Tìm hỗ trợ chăm sóc tại nhà ở Đà Nẵng: 7 câu hỏi nên chuẩn bị trước</a></li><li><a href="/blog/cham-soc-va-can-thiep-tai-nha-dong-hoi-quang-tri/">Chăm sóc và hỗ trợ tại nhà ở Đồng Hới, Quảng Trị: cách chuẩn bị nhu cầu</a></li><li><a href="/blog/cham-soc-me-sau-sinh-tai-nha-6-tuan-dau/">Chăm sóc mẹ sau sinh tại nhà: sáu tuần đầu cần theo dõi gì?</a></li><li><a href="/blog/phuc-hoi-chuc-nang-sau-tai-bien-tac-dung/">Phục hồi chức năng sau tai biến: tác dụng thật và khi nào bắt đầu</a></li><li><a href="/blog/tuyen-cong-tac-vien-cham-soc-tai-nha-da-nang-dot-chuan-bi/">JoyCare tìm cộng tác viên chăm sóc tại nhà ở Đà Nẵng (đợt chuẩn bị)</a></li><li><a href="/blog/chuan-bi-buoi-danh-gia-can-thiep-som-dau-tien-cho-con/">Chuẩn bị gì cho buổi đánh giá can thiệp sớm đầu tiên của con?</a></li><li><a href="/blog/day-tre-khuyet-tat-tai-nha-5-phuong-phap-cha-me-nen-biet/">Dạy trẻ khuyết tật tại nhà: 5 phương pháp cha mẹ nên biết</a></li><li><a href="/blog/tre-tu-ky-nhe-7-dau-hieu-som-cha-me-de-bo-qua/">Trẻ tự kỷ nhẹ: 7 dấu hiệu sớm cha mẹ dễ bỏ qua</a></li><li><a href="/blog/cham-soc-sau-sinh-tai-nha-phuong-hai-chau-da-nang/">Chăm sóc sau sinh tại nhà phường Hải Châu, Đà Nẵng: chuẩn bị gì?</a></li><li><a href="/blog/cham-soc-nguoi-cao-tuoi-tai-nha-phuong-hoa-cuong-da-nang/">Tìm người chăm sóc người cao tuổi tại nhà phường Hòa Cường, Đà Nẵng</a></li><li><a href="/blog/vat-ly-tri-lieu-tai-nha-phuong-an-hai-da-nang/">Vật lý trị liệu tại nhà phường An Hải, Đà Nẵng: chuẩn bị an toàn</a></li><li><a href="/blog/ho-tro-tre-cham-noi-tai-nha-phuong-thanh-khe-da-nang/">Hỗ trợ trẻ chậm nói tại nhà phường Thanh Khê, Đà Nẵng</a></li><li><a href="/blog/ho-tro-tre-tu-ky-adhd-tai-nha-phuong-cam-le-da-nang/">Đồng hành cùng trẻ tự kỷ hoặc ADHD tại nhà phường Cẩm Lệ, Đà Nẵng</a></li><li><a href="/blog/tre-cham-noi-dau-hieu-va-cach-dong-hanh-tai-nha/">Trẻ chậm nói: dấu hiệu cần lưu ý và cách đồng hành tại nhà</a></li><li><a href="/blog/ho-tro-tre-roi-loan-pho-tu-ky-tai-nha/">Hỗ trợ trẻ rối loạn phổ tự kỷ tại nhà: bắt đầu từ nếp sinh hoạt</a></li><li><a href="/blog/dong-hanh-cung-tre-adhd-tai-nha/">Đồng hành cùng trẻ có ADHD tại nhà: 5 thói quen đơn giản</a></li><li><a href="/blog/cham-soc-sau-sinh-tai-nha-6-dieu-can-ho-tro/">Chăm sóc sau sinh tại nhà: 6 điều mẹ cần được hỗ trợ</a></li><li><a href="/blog/phuc-hoi-chuc-nang-tai-nha-tap-an-toan/">Phục hồi chức năng tại nhà: chuẩn bị gì để tập an toàn?</a></li></ul></noscript>
 </section>
 
 <!-- ============ TRANG BÀI VIẾT (trang riêng, không phải popup) ============ -->
@@ -798,7 +844,7 @@
   <div class="max-w-3xl mx-auto text-center">
     <p class="eyebrow mb-3">COMING SOON</p>
     <h2 class="section-heading font-display text-3xl md:text-4xl text-teal-deep mb-4" data-i18n="comingSoon.title">Dịch vụ và mạng lưới cộng tác viên đang được hoàn thiện</h2>
-    <p class="text-teal-mid" data-i18n="comingSoon.text">JoyCare tạm thời chưa nhận đăng ký dịch vụ hoặc cộng tác viên. Chúng tôi ưu tiên xây dựng tiêu chuẩn chuyên môn cho sáu lĩnh vực trọng tâm trước khi mở rộng.</p>
+    <p class="text-teal-mid" data-i18n="comingSoon.text">JoyCare chưa nhận đặt lịch hoặc ghép người hỗ trợ. Chúng tôi đang hoàn thiện tiêu chuẩn chuyên môn và tiếp nhận nhu cầu theo danh sách chờ để thông báo khi có dịch vụ phù hợp.</p>
   </div>
 </section>
 
@@ -956,8 +1002,33 @@
 <!-- ============ TOAST THÔNG BÁO ============ -->
 <div id="toastContainer" class="fixed bottom-5 left-1/2 -translate-x-1/2 z-[100] flex flex-col gap-2 items-center w-full px-4 pointer-events-none"></div>
 
+<!-- ============ COOKIE CONSENT ============ -->
+<section id="cookieConsent" class="cookie-consent hidden" role="dialog" aria-live="polite" aria-label="Tùy chọn cookie">
+  <div class="cookie-consent__inner">
+    <p>JoyCare chỉ bật Google Analytics khi bạn đồng ý cookie. Xem <a href="/chinh-sach-bao-mat/">Chính sách bảo mật</a>.</p>
+    <div class="cookie-consent__actions">
+      <button type="button" data-cookie-consent="declined">Từ chối</button>
+      <button type="button" data-cookie-consent="accepted">Đồng ý</button>
+    </div>
+  </div>
+</section>
+
 <script>
 if(window.lucide) lucide.createIcons();
+
+(function(){
+  const banner = document.getElementById('cookieConsent');
+  if(!banner || !window.joycareAnalytics) return;
+  const show = ()=>banner.classList.remove('hidden');
+  const hide = ()=>banner.classList.add('hidden');
+  if(new URLSearchParams(window.location.search).get('cookie') === 'preferences' || !window.joycareAnalytics.getConsent()) show();
+  document.querySelectorAll('[data-cookie-consent]').forEach(button=>{
+    button.addEventListener('click', ()=>{
+      window.joycareAnalytics.setConsent(button.dataset.cookieConsent);
+      hide();
+    });
+  });
+}());
 
 /* ================= I18N ================= */
 const translations = {
@@ -980,7 +1051,7 @@ const translations = {
     "services.subtitle":"Mỗi độ tuổi, mỗi tình trạng sức khỏe cần một cách chăm sóc khác nhau. JoyCare ghép nối theo đúng chuyên môn.",
     "services.focusText":"<strong class=\"text-teal-deep\">Lĩnh vực trọng tâm:</strong> hỗ trợ trẻ em rối loạn phổ tự kỷ (RLPTK), ADHD và chậm nói; vật lý trị liệu, phục hồi chức năng và chăm sóc sau sinh tại Đà Nẵng.","services.register":"Gửi nhu cầu quan tâm",
     "focus.eyebrow":"GIAI ĐOẠN CHUYÊN BIỆT","focus.title":"Tập trung để chăm sóc đúng hơn","focus.card1Title":"Sáu lĩnh vực trọng tâm","focus.card1Text":"JoyCare đang đầu tư chiều sâu chuyên môn cho chăm sóc sau sinh, can thiệp phát triển trẻ và phục hồi chức năng.","focus.card2Title":"Đăng ký nhận thông tin","focus.card2Text":"Gia đình và cộng tác viên có thể gửi thông tin để JoyCare gửi tài liệu và liên hệ khi triển khai phù hợp.",
-    "registration.eyebrow":"BẮT ĐẦU KẾT NỐI","registration.title":"Bạn đang quan tâm theo cách nào?","registration.subtitle":"Chọn đúng nhu cầu trước, JoyCare sẽ hiển thị biểu mẫu phù hợp để bạn gửi thông tin nhanh và rõ ràng.","registration.customerChoice":"Bạn quan tâm dịch vụ chăm sóc tại nhà — để lại thông tin để nhận tài liệu và được báo khi mở.","registration.caregiverChoice":"Bạn muốn tham gia mạng lưới CTV đợt chuẩn bị.","registration.chooseForm":"Chọn biểu mẫu này →","registration.backToChoices":"← Chọn lại nhu cầu",
+    "registration.eyebrow":"DANH SÁCH CHỜ","registration.title":"Vào danh sách chờ nhận thông tin","registration.subtitle":"Chọn biểu mẫu phù hợp để chia sẻ nhu cầu. Đây chưa phải xác nhận đặt lịch hay ghép người hỗ trợ.","registration.customerChoice":"Bạn quan tâm dịch vụ chăm sóc tại nhà — để lại nhu cầu để được báo khi dịch vụ phù hợp mở.","registration.caregiverChoice":"Bạn muốn được thông báo về đợt tuyển chọn cộng tác viên khi phù hợp.","registration.chooseForm":"Chọn biểu mẫu này →","registration.backToChoices":"← Chọn lại nhu cầu",
     "process.eyebrow":"QUY TRÌNH","process.title":"Chỉ 4 bước để bắt đầu",
     "feedback.eyebrow":"NGƯỜI DÙNG NÓI GÌ VỀ JOYCARE.VN","feedback.title":"Phản hồi về trang web","feedback.subtitle":"Góp ý của người dùng tại Đà Nẵng về nội dung, giao diện và cách JoyCare.vn trình bày thông tin trong giai đoạn chuẩn bị.",
     "nav.blog":"Blog","blog.viewAll":"Xem tất cả bài viết","services.viewAll":"Xem chi tiết từng dịch vụ",
@@ -988,17 +1059,18 @@ const translations = {
     "blog.subtitle":"Kiến thức chăm sóc, phục hồi chức năng và những câu chuyện từ mạng lưới JoyCare.",
     "blog.readMore":"Đọc thêm →","blog.empty":"Chưa có bài viết nào, quay lại sau nhé!",
     "blog.back":"Quay lại Blog","blog.filtering":"Đang lọc theo","blog.clearFilter":"Xem tất cả",
-    "customerForm.eyebrow":"DÀNH CHO GIA ĐÌNH","customerForm.title":"Đăng ký nhận thông tin (Gia đình)",
-    "customerForm.subtitle":"Điền thông tin, JoyCare sẽ gửi tài liệu và liên hệ khi triển khai tại khu vực bạn.",
+    "customerForm.eyebrow":"DÀNH CHO GIA ĐÌNH","customerForm.title":"Vào danh sách chờ nhận thông tin",
+    "customerForm.subtitle":"JoyCare chưa nhận đặt lịch. Hãy để lại nhu cầu để nhận thông tin khi dịch vụ phù hợp mở tại khu vực bạn.",
     "customerForm.name":"Họ và tên","customerForm.phone":"Số điện thoại","customerForm.service":"Dịch vụ cần tìm",
     "customerForm.servicePlaceholder":"-- Chọn dịch vụ --","customerForm.city":"Khu vực","customerForm.schedule":"Thời gian cần",
     "customerForm.fulltime":"Toàn thời gian","customerForm.parttime":"Bán thời gian","customerForm.hourly":"Theo giờ",
-    "customerForm.notes":"Ghi chú thêm","customerForm.submit":"Gửi đăng ký","customerForm.schedulePlaceholder":"-- Chọn thời gian --","customerForm.consultation":"Cần tư vấn trước","customerForm.cityPlaceholder":"Ví dụ: Hải Châu, Đà Nẵng","customerForm.notesPlaceholder":"Nhu cầu, thời điểm mong muốn hoặc điều bạn muốn JoyCare lưu ý",
-    "caregiverForm.eyebrow":"DÀNH CHO NGƯỜI CHĂM SÓC","caregiverForm.title":"Đăng ký CTV đợt chuẩn bị",
-    "caregiverForm.subtitle":"Tham gia đợt chuẩn bị mạng lưới, JoyCare sẽ liên hệ phỏng vấn khi phù hợp.",
+    "customerForm.notes":"Ghi chú thêm","customerForm.submit":"Gửi nhu cầu","customerForm.schedulePlaceholder":"-- Chọn thời gian --","customerForm.consultation":"Cần tư vấn trước","customerForm.cityPlaceholder":"Ví dụ: Hải Châu, Đà Nẵng","customerForm.notesPlaceholder":"Nhu cầu, thời điểm mong muốn hoặc điều bạn muốn JoyCare lưu ý",
+    "caregiverForm.eyebrow":"DÀNH CHO NGƯỜI CHĂM SÓC","caregiverForm.title":"Bày tỏ quan tâm làm CTV",
+    "caregiverForm.subtitle":"Đây chưa phải là xác nhận vào mạng lưới hoặc lịch phỏng vấn. JoyCare sẽ liên hệ khi có đợt tuyển chọn phù hợp.",
     "caregiverForm.name":"Họ và tên","caregiverForm.phone":"Số điện thoại","caregiverForm.experience":"Kinh nghiệm (năm)",
     "caregiverForm.specialty":"Chuyên môn","caregiverForm.specialtyPlaceholder":"-- Chọn chuyên môn --",
-    "caregiverForm.city":"Khu vực làm việc","caregiverForm.certificate":"Chứng chỉ / bằng cấp liên quan","caregiverForm.submit":"Gửi đăng ký","caregiverForm.cityPlaceholder":"Ví dụ: Sơn Trà, Đà Nẵng","caregiverForm.certificatePlaceholder":"Nêu bằng cấp, chứng chỉ hoặc kinh nghiệm phù hợp",
+    "caregiverForm.city":"Khu vực làm việc","caregiverForm.certificate":"Chứng chỉ / bằng cấp liên quan","caregiverForm.submit":"Gửi thông tin quan tâm","caregiverForm.cityPlaceholder":"Ví dụ: Sơn Trà, Đà Nẵng","caregiverForm.certificatePlaceholder":"Nêu bằng cấp, chứng chỉ hoặc kinh nghiệm phù hợp",
+    "form.sensitiveInfoHint":"Không gửi hồ sơ bệnh án, kết quả xét nghiệm, đơn thuốc hoặc giấy tờ tùy thân qua biểu mẫu này.","form.privacyConsent":"Tôi đã đọc <a href=\"/chinh-sach-bao-mat/\">Chính sách bảo mật</a> và đồng ý để JoyCare dùng thông tin này để liên hệ về nhu cầu tôi đã gửi.",
     "service.postpartum":"Chăm sóc sau sinh","service.autism":"Hỗ trợ trẻ tự kỷ (RLPTK)","service.adhd":"Hỗ trợ ADHD","service.speech":"Hỗ trợ trẻ chậm nói","service.physio":"Vật lý trị liệu","service.rehab":"Phục hồi chức năng","service.baby":"Chăm sóc em bé & trẻ nhỏ","service.elderly":"Chăm sóc người già","service.patient":"Chăm sóc người bệnh","service.other":"Nhu cầu khác",
     "specialty.nursing":"Điều dưỡng / chăm sóc","specialty.postpartum":"Chăm sóc sau sinh","specialty.early":"Giáo viên can thiệp sớm","specialty.speech":"Ngôn ngữ trị liệu","specialty.physio":"Kỹ thuật viên VLTL / PHCN","specialty.other":"Chuyên môn khác",
     "survey.eyebrow":"KHẢO SÁT NHANH","survey.title":"Điều gì khiến bạn quan tâm nhất khi tìm hiểu dịch vụ chăm sóc?",
@@ -1007,7 +1079,7 @@ const translations = {
     "popup.opt1":"Em bé / trẻ nhỏ","popup.opt2":"Người già","popup.opt3":"Người bệnh","popup.opt4":"Phục hồi chức năng",
     "popup.note":"Câu trả lời giúp chúng tôi gợi ý dịch vụ phù hợp hơn cho bạn.",
     "footer.tagline":"Kết nối chăm sóc & phục hồi chức năng tại nhà, tận tâm và tin cậy.",
-    "footer.servicesTitle":"Dịch vụ","footer.contactTitle":"Liên hệ","footer.legalTitle":"Pháp lý","footer.service1":"Chăm sóc em bé & trẻ nhỏ","footer.service2":"Chăm sóc người già & người bệnh","footer.service3":"Chăm sóc sau sinh","footer.service4":"Trẻ tự kỷ, ADHD, chậm nói","footer.service5":"Vật lý trị liệu & phục hồi chức năng","footer.location":"71 Nguyễn Chánh, phường Liên Chiểu, Đà Nẵng","footer.terms":"Điều khoản sử dụng","footer.privacy":"Chính sách bảo mật",    "contact.phone":"Xem số điện thoại","contact.zalo":"Nhắn Zalo","phone.callNow":"Gọi ngay (0932 558 788)","phone.eyebrow":"LIÊN HỆ JOYCARE","phone.title":"Số điện thoại tư vấn","phone.text":"Bạn có thể gọi trực tiếp, sao chép số hoặc nhắn tin cho JoyCare qua Zalo hoặc Facebook.","phone.copy":"Sao chép số","comingSoon.title":"Dịch vụ và mạng lưới cộng tác viên đang được hoàn thiện","comingSoon.text":"JoyCare đang hoàn thiện chuyên môn cho sáu lĩnh vực trọng tâm và thu thập nhu cầu. Bạn cứ để lại thông tin, chúng tôi sẽ liên hệ khi triển khai phù hợp."
+    "footer.servicesTitle":"Dịch vụ","footer.contactTitle":"Liên hệ","footer.legalTitle":"Pháp lý","footer.service1":"Chăm sóc em bé & trẻ nhỏ","footer.service2":"Chăm sóc người già & người bệnh","footer.service3":"Chăm sóc sau sinh","footer.service4":"Trẻ tự kỷ, ADHD, chậm nói","footer.service5":"Vật lý trị liệu & phục hồi chức năng","footer.location":"71 Nguyễn Chánh, phường Liên Chiểu, Đà Nẵng","footer.terms":"Điều khoản sử dụng","footer.privacy":"Chính sách bảo mật",    "contact.phone":"Xem số điện thoại","contact.zalo":"Nhắn Zalo","phone.callNow":"Gọi ngay (0932 558 788)","phone.eyebrow":"LIÊN HỆ JOYCARE","phone.title":"Số điện thoại tư vấn","phone.text":"Bạn có thể gọi trực tiếp, sao chép số hoặc nhắn tin cho JoyCare qua Zalo hoặc Facebook.","phone.copy":"Sao chép số","comingSoon.title":"Dịch vụ và mạng lưới cộng tác viên đang được hoàn thiện","comingSoon.text":"JoyCare chưa nhận đặt lịch hoặc ghép người hỗ trợ. Chúng tôi đang hoàn thiện tiêu chuẩn chuyên môn và tiếp nhận nhu cầu theo danh sách chờ để thông báo khi có dịch vụ phù hợp."
   },
   en: {
     "nav.services":"Services","nav.process":"Process","nav.feedback":"Feedback",
@@ -1028,7 +1100,7 @@ const translations = {
     "services.subtitle":"Every age and every condition needs a different kind of care. JoyCare matches by real expertise.",
     "services.focusText":"<strong class=\"text-teal-deep\">Current focus:</strong> support for children with autism (ASD), ADHD and speech delay; physical therapy, rehabilitation and postpartum care in Da Nang.","services.register":"Register your needs",
     "focus.eyebrow":"SPECIALISED FOCUS","focus.title":"Focus deeply, care better","focus.card1Title":"Six priority areas","focus.card1Text":"JoyCare is building deep expertise in postpartum care, child development intervention and rehabilitation.","focus.card2Title":"Register your needs","focus.card2Text":"Families and care professionals can share their details so JoyCare can listen and connect the right next step.",
-    "registration.eyebrow":"START THE CONNECTION","registration.title":"How would you like JoyCare to help?","registration.subtitle":"Choose your need first. We will show the right form so you can register quickly and clearly.","registration.customerChoice":"You need a caregiver or advice about home-based support.","registration.caregiverChoice":"You want to apply as a caregiver or network collaborator.","registration.chooseForm":"Choose this form →","registration.backToChoices":"← Choose another need",
+    "registration.eyebrow":"WAITLIST","registration.title":"Join the information waitlist","registration.subtitle":"Choose the suitable form to share your interest. This is not a booking or a caregiver match confirmation.","registration.customerChoice":"Share your home-care needs to hear when a suitable service opens.","registration.caregiverChoice":"Receive updates when a suitable caregiver recruitment round opens.","registration.chooseForm":"Choose this form →","registration.backToChoices":"← Choose another need",
     "process.eyebrow":"PROCESS","process.title":"Just 4 steps to get started",
     "feedback.eyebrow":"WHAT VISITORS SAY ABOUT JOYCARE.VN","feedback.title":"Feedback on the site","feedback.subtitle":"Notes from people in Da Nang on the content, layout and how JoyCare.vn presents information during its preparation phase.",
     "nav.blog":"Blog","blog.viewAll":"View all posts","services.viewAll":"See each service in detail",
@@ -1036,17 +1108,18 @@ const translations = {
     "blog.subtitle":"Care knowledge, rehabilitation tips, and stories from the JoyCare network.",
     "blog.readMore":"Read more →","blog.empty":"No posts yet — check back soon!",
     "blog.back":"Back to Blog","blog.filtering":"Filtering by","blog.clearFilter":"Clear filter",
-    "customerForm.eyebrow":"FOR FAMILIES","customerForm.title":"Get updates (Families)",
-    "customerForm.subtitle":"Leave your details — JoyCare will share resources and contact you when we open in your area.",
+    "customerForm.eyebrow":"FOR FAMILIES","customerForm.title":"Join the information waitlist",
+    "customerForm.subtitle":"JoyCare is not taking bookings yet. Share your needs to hear when a suitable service opens in your area.",
     "customerForm.name":"Full name","customerForm.phone":"Phone number","customerForm.service":"Service needed",
     "customerForm.servicePlaceholder":"-- Select a service --","customerForm.city":"Area","customerForm.schedule":"Schedule",
     "customerForm.fulltime":"Full-time","customerForm.parttime":"Part-time","customerForm.hourly":"Hourly",
-    "customerForm.notes":"Additional notes","customerForm.submit":"Submit registration","customerForm.schedulePlaceholder":"-- Select a schedule --","customerForm.consultation":"I need advice first","customerForm.cityPlaceholder":"For example: Hai Chau, Da Nang","customerForm.notesPlaceholder":"Your needs, preferred timing, or anything JoyCare should know",
-    "caregiverForm.eyebrow":"FOR CAREGIVERS","caregiverForm.title":"Register as preparation collaborator",
-    "caregiverForm.subtitle":"Join the preparation network — JoyCare will contact you for an interview when suitable.",
+    "customerForm.notes":"Additional notes","customerForm.submit":"Send my needs","customerForm.schedulePlaceholder":"-- Select a schedule --","customerForm.consultation":"I need advice first","customerForm.cityPlaceholder":"For example: Hai Chau, Da Nang","customerForm.notesPlaceholder":"Your needs, preferred timing, or anything JoyCare should know",
+    "caregiverForm.eyebrow":"FOR CAREGIVERS","caregiverForm.title":"Express interest in caregiving",
+    "caregiverForm.subtitle":"This is not network acceptance or an interview appointment. JoyCare will contact you when a suitable recruitment round opens.",
     "caregiverForm.name":"Full name","caregiverForm.phone":"Phone number","caregiverForm.experience":"Experience (years)",
     "caregiverForm.specialty":"Specialty","caregiverForm.specialtyPlaceholder":"-- Select specialty --",
-    "caregiverForm.city":"Working area","caregiverForm.certificate":"Relevant certificates/qualifications","caregiverForm.submit":"Submit registration","caregiverForm.cityPlaceholder":"For example: Son Tra, Da Nang","caregiverForm.certificatePlaceholder":"List relevant qualifications, certificates or experience",
+    "caregiverForm.city":"Working area","caregiverForm.certificate":"Relevant certificates/qualifications","caregiverForm.submit":"Send my interest","caregiverForm.cityPlaceholder":"For example: Son Tra, Da Nang","caregiverForm.certificatePlaceholder":"List relevant qualifications, certificates or experience",
+    "form.sensitiveInfoHint":"Do not send medical records, test results, prescriptions, or identity documents through this form.","form.privacyConsent":"I have read the <a href=\"/chinh-sach-bao-mat/\">Privacy Policy</a> and agree that JoyCare may use this information to contact me about my submitted needs.",
     "service.postpartum":"Postpartum care","service.autism":"Autism support (ASD)","service.adhd":"ADHD support","service.speech":"Speech delay support","service.physio":"Physical therapy","service.rehab":"Rehabilitation","service.baby":"Baby & young child care","service.elderly":"Elderly care","service.patient":"Patient care","service.other":"Another need",
     "specialty.nursing":"Nursing / care","specialty.postpartum":"Postpartum care","specialty.early":"Early intervention teacher","specialty.speech":"Speech therapy","specialty.physio":"Physical therapy / rehabilitation technician","specialty.other":"Another specialty",
     "survey.eyebrow":"QUICK SURVEY","survey.title":"What matters most to you when finding a caregiver?",
@@ -1055,7 +1128,7 @@ const translations = {
     "popup.opt1":"Baby / young child","popup.opt2":"Elderly","popup.opt3":"Patient","popup.opt4":"Rehabilitation",
     "popup.note":"Your answer helps us recommend the right service for you.",
     "footer.tagline":"Connecting home care & rehabilitation, with dedication and trust.",
-    "footer.servicesTitle":"Services","footer.contactTitle":"Contact","footer.legalTitle":"Legal","footer.service1":"Baby & young child care","footer.service2":"Elderly & patient care","footer.service3":"Postpartum care","footer.service4":"Autism, ADHD & speech delay","footer.service5":"Physical therapy & rehabilitation","footer.location":"71 Nguyen Chanh, Lien Chieu, Da Nang","footer.terms":"Terms of use","footer.privacy":"Privacy policy","contact.phone":"View phone number","contact.zalo":"Message on Zalo","phone.callNow":"Call now (0932 558 788)","phone.eyebrow":"CONTACT JOYCARE","phone.title":"Advice hotline","phone.text":"You can call directly, copy the number or message JoyCare via Zalo or Facebook.","phone.copy":"Copy number","comingSoon.title":"Services and our professional network are being prepared","comingSoon.text":"JoyCare is preparing professional standards across six focus areas and collecting needs. Leave your details and we will contact you when a suitable service opens."
+    "footer.servicesTitle":"Services","footer.contactTitle":"Contact","footer.legalTitle":"Legal","footer.service1":"Baby & young child care","footer.service2":"Elderly & patient care","footer.service3":"Postpartum care","footer.service4":"Autism, ADHD & speech delay","footer.service5":"Physical therapy & rehabilitation","footer.location":"71 Nguyen Chanh, Lien Chieu, Da Nang","footer.terms":"Terms of use","footer.privacy":"Privacy policy","contact.phone":"View phone number","contact.zalo":"Message on Zalo","phone.callNow":"Call now (0932 558 788)","phone.eyebrow":"CONTACT JOYCARE","phone.title":"Advice hotline","phone.text":"You can call directly, copy the number or message JoyCare via Zalo or Facebook.","phone.copy":"Copy number","comingSoon.title":"Services and our professional network are being prepared","comingSoon.text":"JoyCare is not taking bookings or assigning caregivers yet. We are preparing professional standards and collecting waitlist needs to notify you when a suitable service opens."
   }
 };
 let currentLang = localStorage.getItem('joycare_lang') || 'vi';
@@ -1280,26 +1353,40 @@ async function sendToBackend(payload){
     return {ok:false, reason:'no-config'};
   }
   try{
-    // Apps Script Web App thường chuyển hướng phản hồi sang googleusercontent.
-    // sendBeacon gửi JSON dạng text/plain mà không bị chặn bởi chuỗi chuyển hướng này.
-    if(navigator.sendBeacon){
-      const queued = navigator.sendBeacon(
-        cfg.appsScriptUrl,
-        new Blob([JSON.stringify(payload)], {type:'text/plain;charset=UTF-8'})
-      );
-      return queued ? {ok:true} : {ok:false, reason:'beacon-not-queued'};
-    }
-    await fetch(cfg.appsScriptUrl, {
+    // Endpoint Apps Script tra ve JSON va cho phep CORS. Khong dung sendBeacon
+    // hoac no-cors, vi hai cach do chi xac nhan trinh duyet da xep hang request.
+    const response = await fetch(cfg.appsScriptUrl, {
       method:'POST',
-      mode:'no-cors',
-      headers:{'Content-Type':'text/plain'},
+      mode:'cors',
+      headers:{'Content-Type':'text/plain;charset=UTF-8'},
       body: JSON.stringify(payload)
     });
-    return {ok:true};
+    if(!response.ok) return {ok:false, reason:'server-error'};
+    const result = await response.json();
+    return result && result.ok ? result : {ok:false, reason:result?.error || 'server-rejected'};
   }catch(err){
     console.error('Lỗi gửi dữ liệu:', err);
     return {ok:false, reason:'network-error'};
   }
+}
+
+function captureCampaignParams(){
+  const query = new URLSearchParams(window.location.search);
+  const campaign = {};
+  [['utm_source','utmSource'],['utm_medium','utmMedium'],['utm_campaign','utmCampaign'],['utm_term','utmTerm'],['utm_content','utmContent']].forEach(([source, target])=>{
+    const value = query.get(source);
+    if(value) campaign[target] = value.slice(0, 120);
+  });
+  return campaign;
+}
+
+function trackFormStart(form, formType){
+  let started = false;
+  form.addEventListener('input', ()=>{
+    if(started) return;
+    started = true;
+    window.joycareTrack?.('waitlist_form_start', {form_type:formType});
+  }, {once:true});
 }
 
 /* ================= FORMS ================= */
@@ -1321,6 +1408,9 @@ async function handleFormSubmit(e, formType, successMsgVi, successMsgEn, resetFo
   const data = Object.fromEntries(new FormData(form).entries());
   data.formType = formType;
   data.timestamp = new Date().toISOString();
+  data.consentVersion = data.consent ? 'privacy-v2026-10-29' : '';
+  data.landingPage = window.location.pathname;
+  Object.assign(data, captureCampaignParams());
   const result = await sendToBackend(data);
   if(btn){
     btn.disabled = false;
@@ -1331,6 +1421,9 @@ async function handleFormSubmit(e, formType, successMsgVi, successMsgEn, resetFo
     showToast(currentLang==='vi' ? successMsgVi : successMsgEn, 'success');
     if(resetForm !== false) form.reset();
     if(status) status.textContent = currentLang==='vi' ? successMsgVi : successMsgEn;
+    if(formType === 'customer_registration' || formType === 'caregiver_registration'){
+      window.joycareTrack?.('waitlist_lead_confirmed', {form_type:formType, service_interest:data.service || ''});
+    }
   } else {
     const errorMessage = currentLang==='vi'
       ? 'Chưa gửi được, vui lòng thử lại hoặc liên hệ trực tiếp qua Zalo/hotline.'
@@ -1344,19 +1437,22 @@ async function handleFormSubmit(e, formType, successMsgVi, successMsgEn, resetFo
 }
 
 document.getElementById('customerForm').addEventListener('submit', e=>
-  handleFormSubmit(e, 'customer',
-    'Yêu cầu đã được gửi. JoyCare sẽ xác nhận và liên hệ với bạn sớm.',
-    'Your request has been sent. JoyCare will confirm it and contact you soon.'));
+  handleFormSubmit(e, 'customer_registration',
+    'JoyCare đã nhận nhu cầu của bạn. Đây chưa phải xác nhận đặt lịch; chúng tôi sẽ liên hệ khi có dịch vụ phù hợp.',
+    'JoyCare received your needs. This is not a booking confirmation; we will contact you when a suitable service opens.'));
 
 document.getElementById('caregiverForm').addEventListener('submit', e=>
-  handleFormSubmit(e, 'caregiver',
-    'Cảm ơn bạn! JoyCare đã ghi nhận nhu cầu và sẽ liên hệ khi triển khai phù hợp.',
-    'Your registration has been sent. JoyCare will confirm it and contact you soon.'));
+  handleFormSubmit(e, 'caregiver_registration',
+    'JoyCare đã ghi nhận sự quan tâm của bạn. Đây chưa phải xác nhận vào mạng lưới hoặc lịch phỏng vấn.',
+    'JoyCare recorded your interest. This is not network acceptance or an interview appointment.'));
 
 document.getElementById('quickSurveyForm').addEventListener('submit', e=>
   handleFormSubmit(e, 'quick_survey',
     'Cảm ơn phản hồi của bạn!',
     'Thanks for your feedback!', false));
+
+trackFormStart(document.getElementById('customerForm'), 'customer_registration');
+trackFormStart(document.getElementById('caregiverForm'), 'caregiver_registration');
 
 document.querySelectorAll('.popupOpt').forEach(btn=>{
   btn.addEventListener('click', async ()=>{
